@@ -1,0 +1,57 @@
+# Introduction in R and RStudio {.unnumbered}
+
+## 
+
+On the first course day (31st January) we will provide a short introduction into R and RStudio.
+
+We will cover the following topics and functions:
+
+###  
+
+-   R and RStudio Installation
+
+-   R-Projects, RMarkdown and Quarto
+
+    -   How to use projects
+
+    -   How to set up an RMarkdown/Quarto File and its most important functions
+
+-   Install and load packages
+
+    -   `install.packages()`
+
+    -   `library()`
+
+-   Load and save data
+
+    -   `read_csv()`
+
+    -   `write_csv()`
+
+-   Data wrangling in `tidyverse`
+
+    -   `mutate()`
+
+    -   Filter and select data: `filter()`, `select()`
+
+    -   Change the data frame: `as.factor()`, `pivot_longer()`, `pivot_wider()`, `relevel()`
+
+    -   Create new variables based on conditions: `case_when()`
+
+    -   use pipes `|>`
+
+-   Summarize data
+
+    -   `summarise()`
+
+-   Data visualisation using the `ggplot` - package
+
+    -   choose an informative graph
+
+    -   mapping: `aes()`
+
+    -   geoms: `geom_boxplot()`, `geom_violin()`, ...
+
+    -   change colors, shapes, labels & more
+
+-   Ressources for further learning

@@ -1,0 +1,69 @@
+# Welcome {.unnumbered}
+
+We are looking forward to meeting you at the "Data Simulation Workshop 2024" in Bern at the Institute of Psychology from the 31.01.2024-02.02.2024.
+
+Here, you will find the most important information about the course.
+
+## Course program
+
+***First course day**: General introduction in R and RStudio*
+
+*31st of January 2024*
+
+09:00-12:00
+
+Room: B102, Fabrikstrasse 8, 3012 Bern
+
+This course day is led by Rahel Steuri and Gerda Wyssen. We will give a brief introduction to working with R and RStudio as well as an overview of the key functions for day 2 and 3. Specifically, we will cover how to install R and RStudio, load packages, import data, data wrangling, and data visualization.
+
+If you are proficient (i.e. regular use) in R and RStudio, you can skip this day as we will provide a general introduction only. The content of the introduction can be found [here](www.github.com/kogpsy/datasimulationcourse_24/introduction.html). The script for day 1 will be also available on this website.
+
+***Second and third course day**: Data simulation with Lisa deBruine*
+
+*1st and 2nd of February 2024*
+
+09:00-17:00
+
+Lunch break: 12:00-13:00 *Lunch will not be provided (Mensa/ Cafeteria is open)*
+
+Room: B102, Fabrikstrasse 8, 3012 Bern
+
+During these two course days, Prof. Dr. Lisa deBruine will give a hands-on introduction to data simulation. It is best to bring your own data to work on during the workshop.
+
+<!-- If you do not have any data, we can provide a sample data set for you. -->
+
+## Course prerequisites for day 2 and 3
+
+-   R and RStudio installed on a laptop,
+
+-   basic knowledge of R(Studio) and R Markdown,
+
+-   installed packages ({faux}, {afex}, {broom}, {tidyverse}, and {lme4} from CRAN),
+
+-   if possible: bring your own data sets, information on planned analyses, etc.
+
+(Support for installing R and RStudio/ packages, and a basic introduction in R will be provided on day 1 of this course)
+
+## About: Lisa deBruine
+
+Prof. Dr. Lisa deBruine is a professor of psychology at the University of Glasgow School of Psychology and Neuroscience. She created the R package {faux} to facilitate data simulation for multilevel modelling.
+
+***For more information,** visit:*
+
+<https://debruine.github.io>
+
+<https://debruine.github.io/project/faux>
+
+<https://rstudio-connect.psy.gla.ac.uk/debruine>
+
+## Contact
+
+For further questions and course registration, please contact
+
+jeannette.gatschet\@unibe.ch
+
+If you wish to join day 1 only (introduction to R and RStudio), please contact Jeannette Gatschet.
+
+## Certificate of attendance
+
+We can provide you with a certificate of attendance upon request.

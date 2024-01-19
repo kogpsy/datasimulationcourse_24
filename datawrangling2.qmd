@@ -1,0 +1,25 @@
+# Data wrangling using the `tidyverse`
+
+
+## Manipulate data sets
+
+-   `mutate()`
+
+-   `filter()` and `select()`
+
+
+## Create and manipulate variables
+
+`` case_when()` `as.factor() `` , `pivot_longer()`, `pivot_wider()`, `relevel()`
+
+
+## Group and summarise data
+
+-   `group_by()`
+
+-   `summarise()`
+
+
+## Use the `|>`
+
+ 

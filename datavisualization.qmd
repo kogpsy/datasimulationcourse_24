@@ -1,0 +1,11 @@
+# Data visualization
+
+-   Data visualisation mit `ggplot` - Package (Gerda)
+
+    -   different Graphs
+
+    -   mapping: `aes()`
+
+    -   Geoms: `geom_boxplot()`, `geom_violin()`, ...
+
+    -   Colors, Shapes, Labels, ...

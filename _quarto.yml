@@ -1,0 +1,35 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Data Simulation Workshop"
+  author: "Rahel Steuri & Gerda Wyssen"
+  date: "today"
+  search: true
+  repo-url: https://github.com/kogpsy/datasimulationcourse_24
+  downloads: [pdf]
+
+  chapters:
+    - index.qmd
+    - aboutthecourse.qmd
+    - introduction.qmd
+    # - randrstudio.qmd
+    # - datawrangling.qmd
+    # - datawrangling2.qmd
+    # - datavisualization.qmd
+    # - ressources.qmd
+    #- references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: lux
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
+margin-header: |
+  ![](imgs/datasimlogo.jpg)

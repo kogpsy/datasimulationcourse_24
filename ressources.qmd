@@ -1,0 +1,11 @@
+# Ressources
+
+## Books / Websites
+
+hadley wickham (tidyverse)
+
+lisas ressources (psychteachR)
+
+## AI
+
+rtutor.ai

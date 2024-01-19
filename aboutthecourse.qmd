@@ -1,0 +1,4 @@
+# Why a data simulation workshop? {.unnumbered}
+
+
+Data simulation enables the careful planning of the research process, from calculating power and sensitivity for analyses, constructing reproducible examples, to preparing analysis scripts for your data. Especially with the increasing importance of pre-registering studies, data simulation has become an essential tool. This workshop will cover the basics of data simulation in R.

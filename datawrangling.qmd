@@ -1,0 +1,15 @@
+# Data wrangling 1
+
+You can work with your own dataset or you can download an example dataset \[here\](/downloadable_files/data.zip). Unzip and save it in the project folder.
+
+## Reading in data
+
+`read_csv()`
+
+ab jetzt sollten sie über `/data/DatasaurusDozen.csv` Zugang dazu haben (wie auch wir, denn es ist auch so in unserem Ordner
+
+## Save data
+
+`write_csv()`
+
+## 
