@@ -1,52 +1,143 @@
 [
   {
+    "objectID": "ressources.html",
+    "href": "ressources.html",
+    "title": "Ressources",
+    "section": "",
+    "text": "hadley wickham (tidyverse)\nlisas ressources (psychteachR)\n\n\n\nrtutor.ai"
+  },
+  {
+    "objectID": "ressources.html#books-websites",
+    "href": "ressources.html#books-websites",
+    "title": "Ressources",
+    "section": "",
+    "text": "hadley wickham (tidyverse)\nlisas ressources (psychteachR)"
+  },
+  {
+    "objectID": "ressources.html#ai",
+    "href": "ressources.html#ai",
+    "title": "Ressources",
+    "section": "",
+    "text": "rtutor.ai"
+  },
+  {
+    "objectID": "randrstudio.html",
+    "href": "randrstudio.html",
+    "title": "R and RStudio",
+    "section": "",
+    "text": "R and RStudio\n\nInstallation\n\n\nWorking with Projects\n\n\nQuarto and Rmarkdown"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Data Simulation Workshop",
+    "title": "Welcome",
     "section": "",
-    "text": "Welcome\nWe are looking forward to meeting you at the “Data Simulation Workshop 2024” in Bern at the Institute of Psychology from the 31.01.2024 - 02.02.2024.\nHere, you will find the most important information about the course."
+    "text": "We are looking forward to meeting you at the “Data Simulation Workshop 2024” in Bern at the Institute of Psychology from the 31.01.2024 - 02.02.2024.\nHere, you will find the most important information about the course.\n\n\nFirst course day: General introduction in R and RStudio\n31st of January 2024\n09:00-12:00\nRoom: B102, Fabrikstrasse 8, 3012 Bern\nThis course day is led by Rahel Steuri and Gerda Wyssen. We will give a brief introduction to working with R and RStudio as well as an overview of the key functions for day 2 and 3. Specifically, we will cover how to install R and RStudio, load packages, import data, data wrangling, and data visualization.\nIf you are proficient (i.e. regular use) in R and RStudio, you can skip this day as we will provide a general introduction only. The content of the introduction can be found here. The script for day 1 will be also available on this website.\nSecond and third course day: Data simulation with Lisa deBruine\n1st and 2nd of February 2024\n09:00-17:00\nLunch break: 12:00-13:00 Lunch will not be provided (Mensa/ Cafeteria is open)\nRoom: B102, Fabrikstrasse 8, 3012 Bern\nDuring these two course days, Prof. Dr. Lisa deBruine will give a hands-on introduction to data simulation. It is best to bring your own data to work on during the workshop.\n\n\n\n\n\nR and RStudio installed on a laptop,\nbasic knowledge of R(Studio) and R Markdown,\ninstalled packages ({faux}, {afex}, {broom}, {tidyverse}, and {lme4} from CRAN),\nif possible: bring your own data sets, information on planned analyses, etc.\n\n(Support for installing R and RStudio/ packages, and a basic introduction in R will be provided on day 1 of this course)\n\n\n\nProf. Dr. Lisa deBruine is a professor of psychology at the University of Glasgow School of Psychology and Neuroscience. She created the R package {faux} to facilitate data simulation for multilevel modelling.\nFor more information, visit:\nhttps://debruine.github.io\nhttps://debruine.github.io/project/faux\nhttps://rstudio-connect.psy.gla.ac.uk/debruine\n\n\n\nFor further questions and course registration, please contact\njeannette.gatschet@unibe.ch\nIf you wish to join day 1 only (introduction to R and RStudio), please contact Jeannette Gatschet.\n\n\n\nWe can provide you with a certificate of attendance upon request."
   },
   {
     "objectID": "index.html#course-program",
     "href": "index.html#course-program",
-    "title": "Data Simulation Workshop",
-    "section": "Course program",
-    "text": "Course program\nFirst course day: General introduction in R and RStudio\n31st of January 2024\n09:00-12:00\nRoom: B102, Fabrikstrasse 8, 3012 Bern\nThis course day is led by Rahel Steuri and Gerda Wyssen. We will give a brief introduction to working with R and RStudio as well as an overview of the key functions for day 2 and 3. Specifically, we will cover how to install R and RStudio, load packages, import data, data wrangling, and data visualization.\nIf you are proficient (i.e. regular use) in R and RStudio, you can skip this day as we will provide a general introduction only. The content of the introduction can be found here. The script for day 1 will be also available on this website.\nSecond and third course day: Data simulation with Lisa deBruine\n1st and 2nd of February 2024\n09:00-17:00\nLunch break: 12:00-13:00 Lunch will not be provided (Mensa/ Cafeteria is open)\nRoom: B102, Fabrikstrasse 8, 3012 Bern\nDuring these two course days, Prof. Dr. Lisa deBruine will give a hands-on introduction to data simulation. It is best to bring your own data to work on during the workshop."
+    "title": "Welcome",
+    "section": "",
+    "text": "First course day: General introduction in R and RStudio\n31st of January 2024\n09:00-12:00\nRoom: B102, Fabrikstrasse 8, 3012 Bern\nThis course day is led by Rahel Steuri and Gerda Wyssen. We will give a brief introduction to working with R and RStudio as well as an overview of the key functions for day 2 and 3. Specifically, we will cover how to install R and RStudio, load packages, import data, data wrangling, and data visualization.\nIf you are proficient (i.e. regular use) in R and RStudio, you can skip this day as we will provide a general introduction only. The content of the introduction can be found here. The script for day 1 will be also available on this website.\nSecond and third course day: Data simulation with Lisa deBruine\n1st and 2nd of February 2024\n09:00-17:00\nLunch break: 12:00-13:00 Lunch will not be provided (Mensa/ Cafeteria is open)\nRoom: B102, Fabrikstrasse 8, 3012 Bern\nDuring these two course days, Prof. Dr. Lisa deBruine will give a hands-on introduction to data simulation. It is best to bring your own data to work on during the workshop."
   },
   {
     "objectID": "index.html#course-prerequisites-for-day-2-and-3",
     "href": "index.html#course-prerequisites-for-day-2-and-3",
-    "title": "Data Simulation Workshop",
-    "section": "Course prerequisites for day 2 and 3",
-    "text": "Course prerequisites for day 2 and 3\n\nR and RStudio installed on a laptop,\nbasic knowledge of R(Studio) and R Markdown,\ninstalled packages ({faux}, {afex}, {broom}, {tidyverse}, and {lme4} from CRAN),\nif possible: bring your own data sets, information on planned analyses, etc.\n\n(Support for installing R and RStudio/ packages, and a basic introduction in R will be provided on day 1 of this course)"
+    "title": "Welcome",
+    "section": "",
+    "text": "R and RStudio installed on a laptop,\nbasic knowledge of R(Studio) and R Markdown,\ninstalled packages ({faux}, {afex}, {broom}, {tidyverse}, and {lme4} from CRAN),\nif possible: bring your own data sets, information on planned analyses, etc.\n\n(Support for installing R and RStudio/ packages, and a basic introduction in R will be provided on day 1 of this course)"
   },
   {
     "objectID": "index.html#about-lisa-debruine",
     "href": "index.html#about-lisa-debruine",
-    "title": "Data Simulation Workshop",
-    "section": "About: Lisa deBruine",
-    "text": "About: Lisa deBruine\nProf. Dr. Lisa deBruine is a professor of psychology at the University of Glasgow School of Psychology and Neuroscience. She created the R package {faux} to facilitate data simulation for multilevel modelling.\nFor more information, visit:\nhttps://debruine.github.io\nhttps://debruine.github.io/project/faux\nhttps://rstudio-connect.psy.gla.ac.uk/debruine"
+    "title": "Welcome",
+    "section": "",
+    "text": "Prof. Dr. Lisa deBruine is a professor of psychology at the University of Glasgow School of Psychology and Neuroscience. She created the R package {faux} to facilitate data simulation for multilevel modelling.\nFor more information, visit:\nhttps://debruine.github.io\nhttps://debruine.github.io/project/faux\nhttps://rstudio-connect.psy.gla.ac.uk/debruine"
   },
   {
     "objectID": "index.html#contact",
     "href": "index.html#contact",
-    "title": "Data Simulation Workshop",
-    "section": "Contact",
-    "text": "Contact\nFor further questions and course registration, please contact\njeannette.gatschet@unibe.ch\nIf you wish to join day 1 only (introduction to R and RStudio), please contact Jeannette Gatschet."
+    "title": "Welcome",
+    "section": "",
+    "text": "For further questions and course registration, please contact\njeannette.gatschet@unibe.ch\nIf you wish to join day 1 only (introduction to R and RStudio), please contact Jeannette Gatschet."
   },
   {
     "objectID": "index.html#certificate-of-attendance",
     "href": "index.html#certificate-of-attendance",
-    "title": "Data Simulation Workshop",
-    "section": "Certificate of attendance",
-    "text": "Certificate of attendance\nWe can provide you with a certificate of attendance upon request."
+    "title": "Welcome",
+    "section": "",
+    "text": "We can provide you with a certificate of attendance upon request."
+  },
+  {
+    "objectID": "datawrangling.html",
+    "href": "datawrangling.html",
+    "title": "Data wrangling 1",
+    "section": "",
+    "text": "You can work with your own dataset or you can download an example dataset [here](/downloadable_files/data.zip). Unzip and save it in the project folder.\n\n\nread_csv()\nab jetzt sollten sie über /data/DatasaurusDozen.csv Zugang dazu haben (wie auch wir, denn es ist auch so in unserem Ordner\n\n\n\nwrite_csv()"
+  },
+  {
+    "objectID": "datawrangling.html#reading-in-data",
+    "href": "datawrangling.html#reading-in-data",
+    "title": "Data wrangling 1",
+    "section": "",
+    "text": "read_csv()\nab jetzt sollten sie über /data/DatasaurusDozen.csv Zugang dazu haben (wie auch wir, denn es ist auch so in unserem Ordner"
+  },
+  {
+    "objectID": "datawrangling.html#save-data",
+    "href": "datawrangling.html#save-data",
+    "title": "Data wrangling 1",
+    "section": "",
+    "text": "write_csv()"
   },
   {
     "objectID": "aboutthecourse.html",
     "href": "aboutthecourse.html",
     "title": "Why a data simulation workshop?",
     "section": "",
-    "text": "Data simulation enables the careful planning of the research process, from calculating power and sensitivity for analyses, constructing reproducible examples, to preparing analysis scripts for your data. Especially with the increasing importance of pre-registering studies, data simulation has become an essential tool. This workshop will cover the basics of data simulation in R."
+    "text": "Why a data simulation workshop?\nData simulation enables the careful planning of the research process, from calculating power and sensitivity for analyses, constructing reproducible examples, to preparing analysis scripts for your data. Especially with the increasing importance of pre-registering studies, data simulation has become an essential tool. This workshop will cover the basics of data simulation in R."
+  },
+  {
+    "objectID": "datavisualization.html",
+    "href": "datavisualization.html",
+    "title": "Data visualization",
+    "section": "",
+    "text": "Data visualization\n\nData visualisation mit ggplot - Package (Gerda)\n\ndifferent Graphs\nmapping: aes()\nGeoms: geom_boxplot(), geom_violin(), …\nColors, Shapes, Labels, …"
+  },
+  {
+    "objectID": "datawrangling2.html",
+    "href": "datawrangling2.html",
+    "title": "Data wrangling using the tidyverse",
+    "section": "",
+    "text": "mutate()\nfilter() and select()\n\n\n\n\ncase_when()` `as.factor() , pivot_longer(), pivot_wider(), relevel()\n\n\n\n\ngroup_by()\nsummarise()"
+  },
+  {
+    "objectID": "datawrangling2.html#manipulate-data-sets",
+    "href": "datawrangling2.html#manipulate-data-sets",
+    "title": "Data wrangling using the tidyverse",
+    "section": "",
+    "text": "mutate()\nfilter() and select()"
+  },
+  {
+    "objectID": "datawrangling2.html#create-and-manipulate-variables",
+    "href": "datawrangling2.html#create-and-manipulate-variables",
+    "title": "Data wrangling using the tidyverse",
+    "section": "",
+    "text": "case_when()` `as.factor() , pivot_longer(), pivot_wider(), relevel()"
+  },
+  {
+    "objectID": "datawrangling2.html#group-and-summarise-data",
+    "href": "datawrangling2.html#group-and-summarise-data",
+    "title": "Data wrangling using the tidyverse",
+    "section": "",
+    "text": "group_by()\nsummarise()"
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction in R and RStudio",
+    "section": "",
+    "text": "On the first course day (31st January) we will provide a short introduction into R and RStudio.\nWe will cover the following topics and functions:\n\n\n\nR and RStudio Installation\nR-Projects, RMarkdown and Quarto\n\nHow to use projects\nHow to set up an RMarkdown/Quarto File and its most important functions\n\nInstall and load packages\n\ninstall.packages()\nlibrary()\n\nLoad and save data\n\nread_csv()\nwrite_csv()\n\nData wrangling in tidyverse\n\nmutate()\nFilter and select data: filter(), select()\nChange the data frame: as.factor(), pivot_longer(), pivot_wider(), relevel()\nCreate new variables based on conditions: case_when()\nuse pipes |&gt;\n\nSummarize data\n\nsummarise()\n\nData visualisation using the ggplot - package\n\nchoose an informative graph\nmapping: aes()\ngeoms: geom_boxplot(), geom_violin(), …\nchange colors, shapes, labels & more\n\nRessources for further learning"
   },
   {
     "objectID": "introduction.html#section",
@@ -54,5 +145,12 @@
     "title": "Introduction in R and RStudio",
     "section": "",
     "text": "On the first course day (31st January) we will provide a short introduction into R and RStudio.\nWe will cover the following topics and functions:\n\n\n\nR and RStudio Installation\nR-Projects, RMarkdown and Quarto\n\nHow to use projects\nHow to set up an RMarkdown/Quarto File and its most important functions\n\nInstall and load packages\n\ninstall.packages()\nlibrary()\n\nLoad and save data\n\nread_csv()\nwrite_csv()\n\nData wrangling in tidyverse\n\nmutate()\nFilter and select data: filter(), select()\nChange the data frame: as.factor(), pivot_longer(), pivot_wider(), relevel()\nCreate new variables based on conditions: case_when()\nuse pipes |&gt;\n\nSummarize data\n\nsummarise()\n\nData visualisation using the ggplot - package\n\nchoose an informative graph\nmapping: aes()\ngeoms: geom_boxplot(), geom_violin(), …\nchange colors, shapes, labels & more\n\nRessources for further learning"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "References"
   }
 ]
