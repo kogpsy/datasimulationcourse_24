@@ -6,7 +6,7 @@ On the first course day (31st January) we will provide a short introduction into
 
 We will cover the following topics and functions:
 
-###  
+### 
 
 -   R and RStudio Installation
 

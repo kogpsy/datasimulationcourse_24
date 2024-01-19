@@ -7,7 +7,7 @@ book:
   author: "Rahel Steuri & Gerda Wyssen"
   date: "today"
   search: true
-  repo-url: https://github.com/kogpsy/datasimulationcourse_24
+  repo-url: https://kogpsy.github.io/datasimulationcourse_24
   downloads: [pdf]
 
   chapters:
