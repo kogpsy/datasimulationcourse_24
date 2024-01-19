@@ -68,4 +68,4 @@ If you wish to join day 1 only (introduction to R and RStudio), please contact J
 
 We can provide you with a certificate of attendance upon request.
 
-[test](https://kogpsy.github.io/datasimulationcourse_24/downloadable_files/data.zip)
+[test](/downloadable_files/data.zip)
