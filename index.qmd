@@ -67,5 +67,3 @@ If you wish to join day 1 only (introduction to R and RStudio), please contact J
 ## Certificate of attendance
 
 We can provide you with a certificate of attendance upon request.
-
-[test](/downloadable_files/data.zip)
