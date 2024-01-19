@@ -49,8 +49,8 @@
     "text": "Data simulation enables the careful planning of the research process, from calculating power and sensitivity for analyses, constructing reproducible examples, to preparing analysis scripts for your data. Especially with the increasing importance of pre-registering studies, data simulation has become an essential tool. This workshop will cover the basics of data simulation in R."
   },
   {
-    "objectID": "introduction.html#section",
-    "href": "introduction.html#section",
+    "objectID": "introduction.html",
+    "href": "introduction.html",
     "title": "Introduction in R and RStudio",
     "section": "",
     "text": "On the first course day (31st January) we will provide a short introduction into R and RStudio.\nWe will cover the following topics and functions:\n\n\n\nR and RStudio Installation\nR-Projects, RMarkdown and Quarto\n\nHow to use projects\nHow to set up an RMarkdown/Quarto File and its most important functions\n\nInstall and load packages\n\ninstall.packages()\nlibrary()\n\nLoad and save data\n\nread_csv()\nwrite_csv()\n\nData wrangling in tidyverse\n\nmutate()\nFilter and select data: filter(), select()\nChange the data frame: as.factor(), pivot_longer(), pivot_wider(), relevel()\nCreate new variables based on conditions: case_when()\nuse pipes |&gt;\n\nSummarize data\n\nsummarise()\n\nData visualisation using the ggplot - package\n\nchoose an informative graph\nmapping: aes()\ngeoms: geom_boxplot(), geom_violin(), …\nchange colors, shapes, labels & more\n\nRessources for further learning"
