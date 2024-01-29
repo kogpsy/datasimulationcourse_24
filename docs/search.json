@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "datavisualization.html#creating-graphs-with-ggplot",
+    "href": "datavisualization.html#creating-graphs-with-ggplot",
+    "title": "4  Data visualization",
+    "section": "4.1 Creating graphs with ggplot()",
+    "text": "4.1 Creating graphs with ggplot()\nggstands for grammar of graphics, a framework which aims to describe all components of a graph. The ggplot2-package relies on this framework hence the name. This package is already included in the tidyverse therefore you do not have to install it again. If you load the tidyverse-library, the ggplot2-library is loaded automatically.\n\nEven art can be created with the ggplot-library as shown hier.\n\n\nlibrary(tidyverse)\n\nd &lt;- read.csv(\"data/DatasaurusDozen.csv\") |&gt;\n    filter(condition %in% c(\"away\", \"bullseye\", \"circle\", \"dino\", \"dots, star\")) |&gt;\n    mutate(id = as.factor(id))\n\nd_summary &lt;- d |&gt; group_by(condition) |&gt;\n    summarise(mean_x = mean(x),\n              sd_x = sd(x),\n              mean_y = mean(y),\n              sd_y = sd(x))\n\nA graph contains always:\n\ndata\ngeoms, visible forms (aesthetics) such as points, lines or boxes.\na coordinate systems / mapping describes how data and geoms are linked, also colors or grouping variables are specified here\n\nFurther components could be:\n\nstatistical parameters\npositions\ncoordinate functions\nfacets\nscales\nthemes\n\n(we will only cover the contents in bold)\n\n\n\n\n\n\nGood to know\n\n\n\n\nIt is easiest when your data is in long format.\nWhat variables do you want to plot (categorical? continuous? …)"
+  },
+  {
+    "objectID": "datavisualization.html#data-geoms-and-mapping",
+    "href": "datavisualization.html#data-geoms-and-mapping",
+    "title": "4  Data visualization",
+    "section": "4.2 Data, geoms and mapping",
+    "text": "4.2 Data, geoms and mapping\nWe start with entering the current data frame and add geoms and mappings (aes()) with arguments such as\n\nggplot(d_summary, # data\n       aes(x = mean_x, y = mean_y)) + # mapping\n    geom_point() # geom \n\n\n\n\nDepending on your variables and what you want to show with your data different geoms are well suited.\nExamples of available geoms:\n\ndata points, scatterplots: geom_point()\nlines, tendencies: geom_line()\nhistograms: geom_histogram()\nmeans and standard deviations: geom_pointrange()\ndensities: geom_density()\nboxplots: geom_boxplot()\nviolin plots: geom_violin()\n\n\n[Here]https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf) you can download ggplot-Cheatsheet("
+  },
+  {
+    "objectID": "datavisualization.html#facets",
+    "href": "datavisualization.html#facets",
+    "title": "4  Data visualization",
+    "section": "4.3 Facets",
+    "text": "4.3 Facets\nWith facets you can show subsets of your data in different panels\n\nggplot(d, # data\n       aes(x = x, y = y)) + # mapping\n    geom_point() + # geom \n    facet_grid(~ condition) # facet"
+  },
+  {
+    "objectID": "datavisualization.html#themes-and-labels",
+    "href": "datavisualization.html#themes-and-labels",
+    "title": "4  Data visualization",
+    "section": "4.4 Themes and labels",
+    "text": "4.4 Themes and labels\n\nggplot(data = d,\n       mapping = aes(x = x,\n                     y = y)) +\n    geom_point() +\n    ggtitle (\"Title\") +\n    xlab(\"Value 1 [a.u.]\") +\n    ylab(\"Value 2 [a.u.]\") +\n    theme_minimal() # also theme_classic and theme_minimal are nice\n\n\n\n\n\n\n\n\n\n\n`esquisse`-package\n\n\n\nWith this package you can use the data frames in your current environment or load a new one to try out which geoms might be useful\n\ninstall.packages(\"esquisse\")\n\nesquisse::esquisser() \n\n\n\nFurther helpful ressources:\n\nggplotdocumentation\nWebsite PsyTeachR: Data Skills for reproducible research\nStart of the PsyTeachR videos by Lisa DeBruine, e.g. Basic Plots, Common Plots and Plot Themes and Customization\nEinführung in R by Andrew Ellis and Boris\nHere you find ideas for plots.\nhttps://rstudio-connect.psy.gla.ac.uk/plotdemo/"
+  }
+]

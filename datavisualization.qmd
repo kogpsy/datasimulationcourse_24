@@ -2,16 +2,136 @@
 
 \
 
--   Data visualisation mit `ggplot` - Package (Gerda)
+## Creating graphs with `ggplot()`
 
-    -   different Graphs
+`gg`stands for [grammar of graphics](https://link.springer.com/book/10.1007/0-387-28695-0), a framework which aims to describe all components of a graph. The `ggplot2`-package relies on this framework hence the name. This package is already included in the `tidyverse` therefore you do not have to install it again. If you load the `tidyverse`-library, the `ggplot2`-library is loaded automatically.
 
-    -   mapping: `aes()`
+<aside>Even art can be created with the `ggplot`-library as shown [hier](https://www.data-imaginist.com/art).</aside>
 
-    -   Geoms: `geom_boxplot()`, `geom_violin()`, ...
+```{r}
+#| warnings: FALSE
+#| errors: FALSE
+#| output: FALSE
+library(tidyverse)
 
-    -   Colors, Shapes, Labels, ...
+d <- read.csv("data/DatasaurusDozen.csv") |>
+    filter(condition %in% c("away", "bullseye", "circle", "dino", "dots, star")) |>
+    mutate(id = as.factor(id))
 
-Further ressources:
+d_summary <- d |> group_by(condition) |>
+    summarise(mean_x = mean(x),
+              sd_x = sd(x),
+              mean_y = mean(y),
+              sd_y = sd(x))
+    
+```
 
-https://rstudio-connect.psy.gla.ac.uk/plotdemo/
+A graph contains always:
+
+-   **data**
+
+-   **geoms**, visible forms (*aesthetics*) such as points, lines or boxes.
+
+-   **a coordinate systems / mapping** describes how data and geoms are linked, also colors or grouping variables are specified here
+
+Further components could be:
+
+-   statistical parameters
+
+-   positions
+
+-   coordinate functions
+
+-   **facets**
+
+-   scales
+
+-   **themes**
+
+(we will only cover the contents in **bold**)
+
+::: {.callout-tip appearance="simple"}
+## Good to know
+
+-   It is easiest when your data is in *long* format.
+
+-   What variables do you want to plot (categorical? continuous? ...)
+:::
+
+## Data, geoms and mapping
+
+We start with entering the current data frame and add geoms and mappings (`aes()`) with arguments such as
+
+```{r}
+ggplot(d_summary, # data
+       aes(x = mean_x, y = mean_y)) + # mapping
+    geom_point() # geom 
+```
+
+Depending on your variables and what you want to show with your data different geoms are well suited.
+
+Examples of available geoms:
+
+-   data points, scatterplots: `geom_point()`
+-   lines, tendencies: `geom_line()`
+-   histograms: `geom_histogram()`
+-   means and standard deviations: `geom_pointrange()`
+-   densities: `geom_density()`
+-   boxplots: `geom_boxplot()`
+-   violin plots: `geom_violin()`
+
+<aside>\[Here\]https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf) you can download `ggplot`-Cheatsheet(</aside>
+
+## Facets
+
+With facets you can show subsets of your data in different panels
+
+```{r}
+ggplot(d, # data
+       aes(x = x, y = y)) + # mapping
+    geom_point() + # geom 
+    facet_grid(~ condition) # facet
+```
+
+## Themes and labels
+
+```{r}
+ggplot(data = d,
+       mapping = aes(x = x,
+                     y = y)) +
+    geom_point() +
+    ggtitle ("Title") +
+    xlab("Value 1 [a.u.]") +
+    ylab("Value 2 [a.u.]") +
+    theme_minimal() # also theme_classic and theme_minimal are nice
+```
+
+::: {.callout-tip appearance="simple"}
+## \`esquisse\`-package
+
+With this package you can use the data frames in your current environment or load a new one to try out which geoms might be useful
+
+```{r}
+#| eval: FALSE
+
+install.packages("esquisse")
+
+esquisse::esquisser() 
+```
+:::
+
+
+
+Further helpful ressources:
+
+- [`ggplot`documentation](https://ggplot2.tidyverse.org/)
+
+- [Website PsyTeachR: Data Skills for reproducible research](https://psyteachr.github.io/reprores-v3)
+
+- [Start of the PsyTeachR videos by Lisa DeBruine](https://youtu.be/90IdULVGmYY), e.g. [Basic Plots](https://youtu.be/tOFQFPRgZ3M), [Common Plots](https://youtu.be/kKlQupjD__g) and [Plot Themes and Customization](https://youtu.be/6pHuCbOh86s)
+
+- [Einführung in R](https://methodenlehre.github.io/einfuehrung-in-R/chapters/05-plotting.html) by Andrew Ellis and Boris 
+
+- [Here](https://www.data-to-viz.com) you find ideas for plots.
+
+- https://rstudio-connect.psy.gla.ac.uk/plotdemo/

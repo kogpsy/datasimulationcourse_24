@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Simulation Workshop - Introduction in R and RStudio</title>
+<title>Data Simulation Workshop - 4&nbsp; Data visualization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Rinstallation.html" rel="next">
-<link href="./aboutthecourse.html" rel="prev">
+<link href="./datawrangling2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -79,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Introduction in R and RStudio</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./datavisualization.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data visualization</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -121,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./introduction.html" class="sidebar-item-text sidebar-link active">
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction in R and RStudio</span></a>
   </div>
 </li>
@@ -145,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datavisualization.html" class="sidebar-item-text sidebar-link">
+  <a href="./datavisualization.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data visualization</span></span></a>
   </div>
 </li>
@@ -161,16 +194,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#creating-graphs-with-ggplot" id="toc-creating-graphs-with-ggplot" class="nav-link active" data-scroll-target="#creating-graphs-with-ggplot"><span class="header-section-number">4.1</span> Creating graphs with <code>ggplot()</code></a></li>
+  <li><a href="#data-geoms-and-mapping" id="toc-data-geoms-and-mapping" class="nav-link" data-scroll-target="#data-geoms-and-mapping"><span class="header-section-number">4.2</span> Data, geoms and mapping</a></li>
+  <li><a href="#facets" id="toc-facets" class="nav-link" data-scroll-target="#facets"><span class="header-section-number">4.3</span> Facets</a></li>
+  <li><a href="#themes-and-labels" id="toc-themes-and-labels" class="nav-link" data-scroll-target="#themes-and-labels"><span class="header-section-number">4.4</span> Themes and labels</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction in R and RStudio</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data visualization</span></h1>
 </div>
 
 
@@ -187,47 +223,138 @@ ul.task-list li input[type="checkbox"] {
 
 <p><br>
 </p>
-<p>On the first course day (31st January) we will provide a short introduction into R and RStudio.</p>
-<p>We will cover the following topics and functions:</p>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
+<section id="creating-graphs-with-ggplot" class="level2 page-columns page-full" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="creating-graphs-with-ggplot"><span class="header-section-number">4.1</span> Creating graphs with <code>ggplot()</code></h2>
+<p><code>gg</code>stands for <a href="https://link.springer.com/book/10.1007/0-387-28695-0">grammar of graphics</a>, a framework which aims to describe all components of a graph. The <code>ggplot2</code>-package relies on this framework hence the name. This package is already included in the <code>tidyverse</code> therefore you do not have to install it again. If you load the <code>tidyverse</code>-library, the <code>ggplot2</code>-library is loaded automatically.</p>
+<aside>
+Even art can be created with the <code>ggplot</code>-library as shown <a href="https://www.data-imaginist.com/art">hier</a>.
+</aside>
+<div class="cell" data-warnings="false" data-errors="false">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/DatasaurusDozen.csv"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"away"</span>, <span class="st">"bullseye"</span>, <span class="st">"circle"</span>, <span class="st">"dino"</span>, <span class="st">"dots, star"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">id =</span> <span class="fu">as.factor</span>(id))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>d_summary <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> <span class="fu">group_by</span>(condition) <span class="sc">|&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">mean_x =</span> <span class="fu">mean</span>(x),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">sd_x =</span> <span class="fu">sd</span>(x),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">mean_y =</span> <span class="fu">mean</span>(y),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">sd_y =</span> <span class="fu">sd</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A graph contains always:</p>
 <ul>
-<li><p>R and RStudio Installation</p></li>
-<li><p>R-Projects, RMarkdown and Quarto</p>
+<li><p><strong>data</strong></p></li>
+<li><p><strong>geoms</strong>, visible forms (<em>aesthetics</em>) such as points, lines or boxes.</p></li>
+<li><p><strong>a coordinate systems / mapping</strong> describes how data and geoms are linked, also colors or grouping variables are specified here</p></li>
+</ul>
+<p>Further components could be:</p>
 <ul>
-<li><p>How to use projects</p></li>
-<li><p>How to set up an RMarkdown/Quarto File and its most important functions</p></li>
-</ul></li>
-<li><p>Install and load packages</p>
+<li><p>statistical parameters</p></li>
+<li><p>positions</p></li>
+<li><p>coordinate functions</p></li>
+<li><p><strong>facets</strong></p></li>
+<li><p>scales</p></li>
+<li><p><strong>themes</strong></p></li>
+</ul>
+<p>(we will only cover the contents in <strong>bold</strong>)</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Good to know
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li><p><code>install.packages()</code></p></li>
-<li><p><code>library()</code></p></li>
-</ul></li>
-<li><p>Load and save data</p>
+<li><p>It is easiest when your data is in <em>long</em> format.</p></li>
+<li><p>What variables do you want to plot (categorical? continuous? …)</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="data-geoms-and-mapping" class="level2 page-columns page-full" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="data-geoms-and-mapping"><span class="header-section-number">4.2</span> Data, geoms and mapping</h2>
+<p>We start with entering the current data frame and add geoms and mappings (<code>aes()</code>) with arguments such as</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(d_summary, <span class="co"># data</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> mean_x, <span class="at">y =</span> mean_y)) <span class="sc">+</span> <span class="co"># mapping</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="co"># geom </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="datavisualization_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Depending on your variables and what you want to show with your data different geoms are well suited.</p>
+<p>Examples of available geoms:</p>
 <ul>
-<li><p><code>read_csv()</code></p></li>
-<li><p><code>write_csv()</code></p></li>
-</ul></li>
-<li><p>Data wrangling in <code>tidyverse</code></p>
+<li>data points, scatterplots: <code>geom_point()</code></li>
+<li>lines, tendencies: <code>geom_line()</code></li>
+<li>histograms: <code>geom_histogram()</code></li>
+<li>means and standard deviations: <code>geom_pointrange()</code></li>
+<li>densities: <code>geom_density()</code></li>
+<li>boxplots: <code>geom_boxplot()</code></li>
+<li>violin plots: <code>geom_violin()</code></li>
+</ul>
+<aside>
+[Here]https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf) you can download <code>ggplot</code>-Cheatsheet(
+</aside>
+</section>
+<section id="facets" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="facets"><span class="header-section-number">4.3</span> Facets</h2>
+<p>With facets you can show subsets of your data in different panels</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(d, <span class="co"># data</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> <span class="co"># mapping</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># geom </span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_grid</span>(<span class="sc">~</span> condition) <span class="co"># facet</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="datavisualization_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="themes-and-labels" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="themes-and-labels"><span class="header-section-number">4.4</span> Themes and labels</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> d,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggtitle</span> (<span class="st">"Title"</span>) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Value 1 [a.u.]"</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="st">"Value 2 [a.u.]"</span>) <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="co"># also theme_classic and theme_minimal are nice</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="datavisualization_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+`esquisse`-package
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With this package you can use the data frames in your current environment or load a new one to try out which geoms might be useful</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"esquisse"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>esquisse<span class="sc">::</span><span class="fu">esquisser</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>Further helpful ressources:</p>
 <ul>
-<li><p><code>mutate()</code></p></li>
-<li><p>Filter and select data: <code>filter()</code>, <code>select()</code></p></li>
-<li><p>Change the data frame: <code>as.factor()</code>, <code>pivot_longer()</code>, <code>pivot_wider()</code>, <code>relevel()</code></p></li>
-<li><p>Create new variables based on conditions: <code>case_when()</code></p></li>
-<li><p>use pipes <code>|&gt;</code></p></li>
-</ul></li>
-<li><p>Summarize data</p>
-<ul>
-<li><code>summarise()</code></li>
-</ul></li>
-<li><p>Data visualisation using the <code>ggplot</code> - package</p>
-<ul>
-<li><p>choose an informative graph</p></li>
-<li><p>mapping: <code>aes()</code></p></li>
-<li><p>geoms: <code>geom_boxplot()</code>, <code>geom_violin()</code>, …</p></li>
-<li><p>change colors, shapes, labels &amp; more</p></li>
-</ul></li>
-<li><p>Ressources for further learning</p></li>
+<li><p><a href="https://ggplot2.tidyverse.org/"><code>ggplot</code>documentation</a></p></li>
+<li><p><a href="https://psyteachr.github.io/reprores-v3">Website PsyTeachR: Data Skills for reproducible research</a></p></li>
+<li><p><a href="https://youtu.be/90IdULVGmYY">Start of the PsyTeachR videos by Lisa DeBruine</a>, e.g.&nbsp;<a href="https://youtu.be/tOFQFPRgZ3M">Basic Plots</a>, <a href="https://youtu.be/kKlQupjD__g">Common Plots</a> and <a href="https://youtu.be/6pHuCbOh86s">Plot Themes and Customization</a></p></li>
+<li><p><a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/05-plotting.html">Einführung in R</a> by Andrew Ellis and Boris</p></li>
+<li><p><a href="https://www.data-to-viz.com">Here</a> you find ideas for plots.</p></li>
+<li><p>https://rstudio-connect.psy.gla.ac.uk/plotdemo/</p></li>
 </ul>
 
 
@@ -532,14 +659,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./aboutthecourse.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Why a data simulation workshop?</span>
+      <a href="./datawrangling2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data wrangling using the <code>tidyverse</code></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Rinstallation.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R and RStudio</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
