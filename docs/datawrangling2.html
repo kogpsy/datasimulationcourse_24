@@ -131,7 +131,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <a href="./">Data Simulation Workshop</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/kogpsy/datasimulationcourse_24" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./Data-Simulation-Workshop.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
@@ -241,8 +240,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <p><br>
-<br>
-The <a href="https://www.tidyverse.org/">tidyverse</a> is a collection of R packages designed for data science. More information on the tidyverse can be found <a href="https://r4ds.had.co.nz/">here</a>.</p>
+</p>
+<p>The <a href="https://www.tidyverse.org/">tidyverse</a> is a collection of R packages designed for data science. More information on the tidyverse can be found <a href="https://r4ds.had.co.nz/">here</a>.</p>
 <p>The tidyverse collection can be downloaded and loaded directly in R:</p>
 <div class="cell" data-warnings="false" data-errors="false">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># download tidyverse package (only do this once)</span></span>
@@ -251,7 +250,7 @@ The <a href="https://www.tidyverse.org/">tidyverse</a> is a collection of R pack
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># load library (run this at the beginning of your script)</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Functions of the tidyverse allow you to perform data wrangling easily.</p>
+<p>Functions of the <code>tidyverse</code> allow you to perform data wrangling easily.</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -518,7 +517,7 @@ Rule of thumb
 # ℹ 132 more rows</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># look at each individual in each condition</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>d_sum <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> <span class="fu">group_by</span>(id, condition) <span class="sc">|&gt;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>d_summary <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> <span class="fu">group_by</span>(id, condition) <span class="sc">|&gt;</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">mean_x =</span> <span class="fu">mean</span>(x),</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">sd_x =</span> <span class="fu">sd</span>(x),</span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">mean_y =</span> <span class="fu">mean</span>(y),</span>
@@ -527,7 +526,7 @@ Rule of thumb
 <pre><code>`summarise()` has grouped output by 'id'. You can override using the `.groups`
 argument.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(d_sum)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(d_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 568
 Columns: 6

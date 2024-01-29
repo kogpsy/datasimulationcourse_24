@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -96,7 +130,6 @@ ul.task-list li input[type="checkbox"] {
       <a href="./">Data Simulation Workshop</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/kogpsy/datasimulationcourse_24" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./Data-Simulation-Workshop.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
@@ -157,10 +190,19 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
 <p><img src="imgs/datasimlogo.jpg" class="img-fluid"></p>
 </div></div>
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#creating-graphs-with-ggplot" id="toc-creating-graphs-with-ggplot" class="nav-link active" data-scroll-target="#creating-graphs-with-ggplot"><span class="header-section-number">4.1</span> Creating graphs with <code>ggplot()</code></a></li>
+  <li><a href="#data-geoms-and-mapping" id="toc-data-geoms-and-mapping" class="nav-link" data-scroll-target="#data-geoms-and-mapping"><span class="header-section-number">4.2</span> Data, geoms and mapping</a></li>
+  <li><a href="#facets" id="toc-facets" class="nav-link" data-scroll-target="#facets"><span class="header-section-number">4.3</span> Facets</a></li>
+  <li><a href="#themes-and-labels" id="toc-themes-and-labels" class="nav-link" data-scroll-target="#themes-and-labels"><span class="header-section-number">4.4</span> Themes and labels</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -179,19 +221,144 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p><br>
+</p>
+<section id="creating-graphs-with-ggplot" class="level2 page-columns page-full" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="creating-graphs-with-ggplot"><span class="header-section-number">4.1</span> Creating graphs with <code>ggplot()</code></h2>
+<p><code>gg</code>stands for <a href="https://link.springer.com/book/10.1007/0-387-28695-0">grammar of graphics</a>, a framework which aims to describe all components of a graph. The <code>ggplot2</code>-package relies on this framework hence the name. This package is already included in the <code>tidyverse</code> therefore you do not have to install it again. If you load the <code>tidyverse</code>-library, the <code>ggplot2</code>-library is loaded automatically.</p>
+<aside>
+Even art can be created with the <code>ggplot</code>-library as shown <a href="https://www.data-imaginist.com/art">hier</a>.
+</aside>
+<div class="cell" data-warnings="false" data-errors="false">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/DatasaurusDozen.csv"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"away"</span>, <span class="st">"bullseye"</span>, <span class="st">"circle"</span>, <span class="st">"dino"</span>, <span class="st">"dots, star"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">id =</span> <span class="fu">as.factor</span>(id))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>d_summary <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> <span class="fu">group_by</span>(condition) <span class="sc">|&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">mean_x =</span> <span class="fu">mean</span>(x),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">sd_x =</span> <span class="fu">sd</span>(x),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">mean_y =</span> <span class="fu">mean</span>(y),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">sd_y =</span> <span class="fu">sd</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A graph contains always:</p>
 <ul>
-<li><p>Data visualisation mit <code>ggplot</code> - Package (Gerda)</p>
-<ul>
-<li><p>different Graphs</p></li>
-<li><p>mapping: <code>aes()</code></p></li>
-<li><p>Geoms: <code>geom_boxplot()</code>, <code>geom_violin()</code>, …</p></li>
-<li><p>Colors, Shapes, Labels, …</p></li>
-</ul></li>
+<li><p><strong>data</strong></p></li>
+<li><p><strong>geoms</strong>, visible forms (<em>aesthetics</em>) such as points, lines or boxes.</p></li>
+<li><p><strong>a coordinate systems / mapping</strong> describes how data and geoms are linked, also colors or grouping variables are specified here</p></li>
 </ul>
-<p>Further ressources:</p>
-<p>https://rstudio-connect.psy.gla.ac.uk/plotdemo/</p>
+<p>Further components could be:</p>
+<ul>
+<li><p>statistical parameters</p></li>
+<li><p>positions</p></li>
+<li><p>coordinate functions</p></li>
+<li><p><strong>facets</strong></p></li>
+<li><p>scales</p></li>
+<li><p><strong>themes</strong></p></li>
+</ul>
+<p>(we will only cover the contents in <strong>bold</strong>)</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Good to know
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>It is easiest when your data is in <em>long</em> format.</p></li>
+<li><p>What variables do you want to plot (categorical? continuous? …)</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="data-geoms-and-mapping" class="level2 page-columns page-full" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="data-geoms-and-mapping"><span class="header-section-number">4.2</span> Data, geoms and mapping</h2>
+<p>We start with entering the current data frame and add geoms and mappings (<code>aes()</code>) with arguments such as</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(d_summary, <span class="co"># data</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> mean_x, <span class="at">y =</span> mean_y)) <span class="sc">+</span> <span class="co"># mapping</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="co"># geom </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="datavisualization_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Depending on your variables and what you want to show with your data different geoms are well suited.</p>
+<p>Examples of available geoms:</p>
+<ul>
+<li>data points, scatterplots: <code>geom_point()</code></li>
+<li>lines, tendencies: <code>geom_line()</code></li>
+<li>histograms: <code>geom_histogram()</code></li>
+<li>means and standard deviations: <code>geom_pointrange()</code></li>
+<li>densities: <code>geom_density()</code></li>
+<li>boxplots: <code>geom_boxplot()</code></li>
+<li>violin plots: <code>geom_violin()</code></li>
+</ul>
+<aside>
+[Here]https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf) you can download <code>ggplot</code>-Cheatsheet(
+</aside>
+</section>
+<section id="facets" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="facets"><span class="header-section-number">4.3</span> Facets</h2>
+<p>With facets you can show subsets of your data in different panels</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(d, <span class="co"># data</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> <span class="co"># mapping</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># geom </span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_grid</span>(<span class="sc">~</span> condition) <span class="co"># facet</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="datavisualization_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="themes-and-labels" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="themes-and-labels"><span class="header-section-number">4.4</span> Themes and labels</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> d,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggtitle</span> (<span class="st">"Title"</span>) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Value 1 [a.u.]"</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="st">"Value 2 [a.u.]"</span>) <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="co"># also theme_classic and theme_minimal are nice</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="datavisualization_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+`esquisse`-package
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With this package you can use the data frames in your current environment or load a new one to try out which geoms might be useful</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"esquisse"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>esquisse<span class="sc">::</span><span class="fu">esquisser</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>Further helpful ressources:</p>
+<ul>
+<li><p><a href="https://ggplot2.tidyverse.org/"><code>ggplot</code>documentation</a></p></li>
+<li><p><a href="https://psyteachr.github.io/reprores-v3">Website PsyTeachR: Data Skills for reproducible research</a></p></li>
+<li><p><a href="https://youtu.be/90IdULVGmYY">Start of the PsyTeachR videos by Lisa DeBruine</a>, e.g.&nbsp;<a href="https://youtu.be/tOFQFPRgZ3M">Basic Plots</a>, <a href="https://youtu.be/kKlQupjD__g">Common Plots</a> and <a href="https://youtu.be/6pHuCbOh86s">Plot Themes and Customization</a></p></li>
+<li><p><a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/05-plotting.html">Einführung in R</a> by Andrew Ellis and Boris</p></li>
+<li><p><a href="https://www.data-to-viz.com">Here</a> you find ideas for plots.</p></li>
+<li><p>https://rstudio-connect.psy.gla.ac.uk/plotdemo/</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

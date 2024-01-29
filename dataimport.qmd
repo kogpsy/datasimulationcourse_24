@@ -4,9 +4,9 @@
 
 ## CSV format
 
-We will read data in r by loading the example data DatasaurusDozen.csv. You can download the zip file containing the data here.
+We will read data in r by loading the example data `DatasaurusDozen.csv`. You can download the zip file containing the data [here](/downloadable_files/data.zip).
 
-After saving the unzipped downloaded file in the same folder as your `.Rproj`, you can import the file with the following line of code:
+After saving the unzipped downloaded folder `data` in the same folder as your `.Rproj`, you can import the file with the following line of code:
 
 ```{r}
 library(readr)
@@ -50,6 +50,5 @@ If the following error message appears, it means that your working directory is 
 :::
 
 ::: {.callout-important appearance="simple"}
-If you save your data in a designated `data` folder located on the same level as your .rproj file, you should not encounter any error messages regarding your working directory. Do not forget to start your R-session by opening your `.Rproj`-file (**not** by opening your scripts).
+If you save your data in a designated `data` folder located on the same level as your `.Rproj`-file, you should not encounter any error messages regarding your working directory. Do not forget to start your R-session by opening your `.Rproj`-file (**not** by opening your scripts).
 :::
-
