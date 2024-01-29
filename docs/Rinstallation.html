@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Simulation Workshop - Introduction in R and RStudio</title>
+<title>Data Simulation Workshop - 1&nbsp; Installing R and RStudio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Rinstallation.html" rel="next">
-<link href="./aboutthecourse.html" rel="prev">
+<link href="./dataimport.html" rel="next">
+<link href="./introduction.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -79,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Introduction in R and RStudio</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Rinstallation.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R and RStudio</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -122,13 +156,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./introduction.html" class="sidebar-item-text sidebar-link active">
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction in R and RStudio</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Rinstallation.html" class="sidebar-item-text sidebar-link">
+  <a href="./Rinstallation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R and RStudio</span></span></a>
   </div>
 </li>
@@ -162,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#working-with-r-projects-and-r-markdown" id="toc-working-with-r-projects-and-r-markdown" class="nav-link active" data-scroll-target="#working-with-r-projects-and-r-markdown"><span class="header-section-number">1.1</span> Working with R projects and R Markdown</a></li>
   </ul>
 </nav>
     </div>
@@ -171,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction in R and RStudio</h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R and RStudio</span></h1>
 </div>
 
 
@@ -186,48 +220,82 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>On the first course day (31st January) we will provide a short introduction into R and RStudio.</p>
-<p>We will cover the following topics and functions:</p>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
+<p><br>
+</p>
+<p>You will have to install R and RStudio separately. R</p>
 <ul>
-<li><p>R and RStudio Installation</p></li>
-<li><p>R-Projects, RMarkdown and Quarto</p>
-<ul>
-<li><p>How to use projects</p></li>
-<li><p>How to set up an RMarkdown/Quarto File and its most important functions</p></li>
-</ul></li>
-<li><p>Install and load packages</p>
-<ul>
-<li><p><code>install.packages()</code></p></li>
-<li><p><code>library()</code></p></li>
-</ul></li>
-<li><p>Load and save data</p>
-<ul>
-<li><p><code>read_csv()</code></p></li>
-<li><p><code>write_csv()</code></p></li>
-</ul></li>
-<li><p>Data wrangling in <code>tidyverse</code></p>
-<ul>
-<li><p><code>mutate()</code></p></li>
-<li><p>Filter and select data: <code>filter()</code>, <code>select()</code></p></li>
-<li><p>Change the data frame: <code>as.factor()</code>, <code>pivot_longer()</code>, <code>pivot_wider()</code>, <code>relevel()</code></p></li>
-<li><p>Create new variables based on conditions: <code>case_when()</code></p></li>
-<li><p>use pipes <code>|&gt;</code></p></li>
-</ul></li>
-<li><p>Summarize data</p>
-<ul>
-<li><code>summarise()</code></li>
-</ul></li>
-<li><p>Data visualisation using the <code>ggplot</code> - package</p>
-<ul>
-<li><p>choose an informative graph</p></li>
-<li><p>mapping: <code>aes()</code></p></li>
-<li><p>geoms: <code>geom_boxplot()</code>, <code>geom_violin()</code>, …</p></li>
-<li><p>change colors, shapes, labels &amp; more</p></li>
-</ul></li>
-<li><p>Ressources for further learning</p></li>
+<li><p>The latest R version: <a href="https://cran.rstudio.com/"><strong>R version 4.3.2 (31-10-2023)</strong></a></p></li>
+<li><p>As well as RStudio: <a href="https://posit.co/download/rstudio-desktop/"><strong>RStudio Desktop</strong></a></p></li>
 </ul>
+<p>In addition, we will need to install the following packages:</p>
+<ul>
+<li><p><code>tidyverse</code>, <code>ggplot</code>, <code>faux</code>, <code>lme4</code>, <code>broom</code>, <code>afex</code></p></li>
+<li><p>We can install packages with the following line of code:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>To load packages, use the following line of code:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When installing packages, you will have to put the package’s name into quotation marks (double or single). Otherwise, R will not be able to find and download the specific package. When loading a package, you do not have to put the name into quotation marks.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Apart from major R/ RStudio updates, you will not have to download the packages again before running your code. Once downloaded, the packages are saved to your computer. But you will have to load your packages when restarting R and running your code.</p>
+</div>
+</div>
+<section id="working-with-r-projects-and-r-markdown" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="working-with-r-projects-and-r-markdown"><span class="header-section-number">1.1</span> Working with R projects and R Markdown</h2>
+<p>RStudio projects provide a useful workflow for working with R. By using projects, you will have all of your files (e.g.&nbsp;data or scripts) accessible to your current R session. In short, R projects set the working directory.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you start to analyse your data, create a new RProject as a first step. Making a RProject will automatically create a file with the .proj extension. Make sure to save this file together with all additional scripts in one folder. In addition, put your data into a subfolder titled “data”. This subfolder is located in the same folder as your .rproj file and scripts.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To initialise a new R-session, do so by opening the <code>.Rproj</code>-file and <strong>not</strong> by opening your R scripts. Doing so will ensure that your working directory is set up correctly.</p>
+</div>
+</div>
 
 
 </section>
@@ -531,13 +599,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./aboutthecourse.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Why a data simulation workshop?</span>
+      <a href="./introduction.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction in R and RStudio</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Rinstallation.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R and RStudio</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./dataimport.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Importing Data into R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

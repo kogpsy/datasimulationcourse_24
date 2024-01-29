@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Simulation Workshop - Introduction in R and RStudio</title>
+<title>Data Simulation Workshop - 4&nbsp; Data visualization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Rinstallation.html" rel="next">
-<link href="./aboutthecourse.html" rel="prev">
+<link href="./datawrangling2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -79,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Introduction in R and RStudio</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./datavisualization.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data visualization</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -122,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./introduction.html" class="sidebar-item-text sidebar-link active">
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction in R and RStudio</span></a>
   </div>
 </li>
@@ -146,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datavisualization.html" class="sidebar-item-text sidebar-link">
+  <a href="./datavisualization.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data visualization</span></span></a>
   </div>
 </li>
@@ -158,20 +157,14 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
 <p><img src="imgs/datasimlogo.jpg" class="img-fluid"></p>
 </div></div>
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction in R and RStudio</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data visualization</span></h1>
 </div>
 
 
@@ -186,51 +179,19 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>On the first course day (31st January) we will provide a short introduction into R and RStudio.</p>
-<p>We will cover the following topics and functions:</p>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
 <ul>
-<li><p>R and RStudio Installation</p></li>
-<li><p>R-Projects, RMarkdown and Quarto</p>
+<li><p>Data visualisation mit <code>ggplot</code> - Package (Gerda)</p>
 <ul>
-<li><p>How to use projects</p></li>
-<li><p>How to set up an RMarkdown/Quarto File and its most important functions</p></li>
-</ul></li>
-<li><p>Install and load packages</p>
-<ul>
-<li><p><code>install.packages()</code></p></li>
-<li><p><code>library()</code></p></li>
-</ul></li>
-<li><p>Load and save data</p>
-<ul>
-<li><p><code>read_csv()</code></p></li>
-<li><p><code>write_csv()</code></p></li>
-</ul></li>
-<li><p>Data wrangling in <code>tidyverse</code></p>
-<ul>
-<li><p><code>mutate()</code></p></li>
-<li><p>Filter and select data: <code>filter()</code>, <code>select()</code></p></li>
-<li><p>Change the data frame: <code>as.factor()</code>, <code>pivot_longer()</code>, <code>pivot_wider()</code>, <code>relevel()</code></p></li>
-<li><p>Create new variables based on conditions: <code>case_when()</code></p></li>
-<li><p>use pipes <code>|&gt;</code></p></li>
-</ul></li>
-<li><p>Summarize data</p>
-<ul>
-<li><code>summarise()</code></li>
-</ul></li>
-<li><p>Data visualisation using the <code>ggplot</code> - package</p>
-<ul>
-<li><p>choose an informative graph</p></li>
+<li><p>different Graphs</p></li>
 <li><p>mapping: <code>aes()</code></p></li>
-<li><p>geoms: <code>geom_boxplot()</code>, <code>geom_violin()</code>, …</p></li>
-<li><p>change colors, shapes, labels &amp; more</p></li>
+<li><p>Geoms: <code>geom_boxplot()</code>, <code>geom_violin()</code>, …</p></li>
+<li><p>Colors, Shapes, Labels, …</p></li>
 </ul></li>
-<li><p>Ressources for further learning</p></li>
 </ul>
+<p>Further ressources:</p>
+<p>https://rstudio-connect.psy.gla.ac.uk/plotdemo/</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -531,14 +492,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./aboutthecourse.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Why a data simulation workshop?</span>
+      <a href="./datawrangling2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data wrangling using the <code>tidyverse</code></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Rinstallation.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R and RStudio</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

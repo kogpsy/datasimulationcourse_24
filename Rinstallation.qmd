@@ -1,0 +1,46 @@
+# Installing R and RStudio
+
+\
+
+You will have to install R and RStudio separately. R
+
+-   The latest R version: [**R version 4.3.2 (31-10-2023)**](https://cran.rstudio.com/)
+
+-   As well as RStudio: [**RStudio Desktop**](https://posit.co/download/rstudio-desktop/)
+
+In addition, we will need to install the following packages:
+
+-   `tidyverse`, `ggplot`, `faux`, `lme4`, `broom`, `afex`
+
+-   We can install packages with the following line of code:
+
+```{r eval=FALSE, include=TRUE}
+    install.packages("tidyverse")
+```
+
+-   To load packages, use the following line of code:
+
+```{r eval=FALSE, include=TRUE}
+    library(tidyverse)
+```
+
+::: {.callout-warning appearance="simple"}
+When installing packages, you will have to put the package's name into quotation marks (double or single). Otherwise, R will not be able to find and download the specific package. When loading a package, you do not have to put the name into quotation marks.
+:::
+
+::: {.callout-important appearance="simple"}
+Apart from major R/ RStudio updates, you will not have to download the packages again before running your code. Once downloaded, the packages are saved to your computer. But you will have to load your packages when restarting R and running your code.
+:::
+
+## Working with R projects and R Markdown
+
+RStudio projects provide a useful workflow for working with R. By using projects, you will have all of your files (e.g. data or scripts) accessible to your current R session. In short, R projects set the working directory.
+
+::: {.callout-tip appearance="simple"}
+When you start to analyse your data, create a new RProject as a first step. Making a RProject will automatically create a file with the .proj extension. Make sure to save this file together with all additional scripts in one folder. In addition, put your data into a subfolder titled "data". This subfolder is located in the same folder as your .rproj file and scripts.
+:::
+
+::: {.callout-caution appearance="simple"}
+To initialise a new R-session, do so by opening the `.Rproj`-file and **not** by opening your R scripts. Doing so will ensure that your working directory is set up correctly.
+:::
+

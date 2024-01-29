@@ -9,3 +9,7 @@
     -   Geoms: `geom_boxplot()`, `geom_violin()`, ...
 
     -   Colors, Shapes, Labels, ...
+
+Further ressources:
+
+https://rstudio-connect.psy.gla.ac.uk/plotdemo/

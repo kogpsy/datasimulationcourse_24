@@ -14,11 +14,11 @@ book:
     - index.qmd
     - aboutthecourse.qmd
     - introduction.qmd
-    # - randrstudio.qmd
-    # - datawrangling.qmd
-    # - datawrangling2.qmd
-    # - datavisualization.qmd
-    # - ressources.qmd
+    - Rinstallation.qmd
+    - dataimport.qmd
+    - datawrangling2.qmd
+    #- datavisualization.qmd
+    #- ressources.qmd
     #- references.qmd
 
 bibliography: references.bib

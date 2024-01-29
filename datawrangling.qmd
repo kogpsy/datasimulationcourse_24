@@ -4,9 +4,12 @@ You can work with your own dataset or you can download an example dataset \[[her
 
 ## Reading in data
 
-`read_csv()`
+```{r}
+d <- read.csv("data/DatasaurusDozen.csv")
+glimpse(d)
+```
 
-ab jetzt sollten sie über `/data_example/DatasaurusDozen.csv` Zugang dazu haben (wie auch wir, denn es ist auch so in unserem Ordner
+ab jetzt sollten sie über `/data/DatasaurusDozen.csv` Zugang dazu haben (wie auch wir, denn es ist auch so in unserem Ordner
 
 ## Save data
 

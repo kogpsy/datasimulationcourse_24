@@ -1,0 +1,55 @@
+# Importing Data into R
+
+\
+
+## CSV format
+
+We will read data in r by loading the example data DatasaurusDozen.csv. You can download the zip file containing the data here.
+
+After saving the unzipped downloaded file in the same folder as your `.Rproj`, you can import the file with the following line of code:
+
+```{r}
+library(readr)
+dino_data <- read_csv("data/DatasaurusDozen.csv", show_col_types = FALSE)
+View(dino_data)
+```
+
+::: {.callout-tip appearance="simple"}
+-   Using the `head()`-function provides you with an easy and quick way to check whether your data was imported correctly.
+-   You can use the `View()`-function to inspect your data.
+:::
+
+## Data from Excel
+
+Importing data from Excel into R, you can use the `read_excel()`-function.
+
+::: {.callout-important appearance="simple"}
+You will have to install the `readxl()`-package before you can use the `read_excel()`-function.
+:::
+
+## Useful functions
+
+There are a few useful functions that provide you with easy and quick ways to check your imported data.
+
+-   With the `View()`function will give you a spreadsheet-like rendering of your data. Don't forget to write a capitalised **V**.
+
+-   The `head()`-function is an easy way to check whether your data was imported correctly by displaying a a certain amount of rows. You can specify how many rows should be shown in the function's argument.
+
+-   With the `names()`-function returns a character vector containing your variable names.
+
+### Common import mistakes
+
+::: {.callout-tip appearance="simple"}
+If the following error message appears, it means that your working directory is not set correctly.
+
+```         
+     Error in file(file, "rt") : cannot open the connection         
+     In addition: Warning message: In file(file, "rt") : cannot open file                            
+     'data/DatasaurusDozen.csv': No such file or directory
+```
+:::
+
+::: {.callout-important appearance="simple"}
+If you save your data in a designated `data` folder located on the same level as your .rproj file, you should not encounter any error messages regarding your working directory. Do not forget to start your R-session by opening your `.Rproj`-file (**not** by opening your scripts).
+:::
+
