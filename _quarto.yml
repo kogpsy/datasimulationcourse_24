@@ -8,7 +8,7 @@ book:
   date: "today"
   search: true
   repo-url: https://github.com/kogpsy/datasimulationcourse_24
-  downloads: [pdf]
+  #downloads: [pdf]
 
   chapters:
     - index.qmd

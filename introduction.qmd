@@ -1,5 +1,7 @@
 # Introduction in R and RStudio {.unnumbered}
 
+\
+
 On the first course day (31st January) we will provide a short introduction into R and RStudio.
 
 We will cover the following topics and functions:

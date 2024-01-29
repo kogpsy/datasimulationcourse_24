@@ -37,7 +37,7 @@ Apart from major R/ RStudio updates, you will not have to download the packages 
 RStudio projects provide a useful workflow for working with R. By using projects, you will have all of your files (e.g. data or scripts) accessible to your current R session. In short, R projects set the working directory.
 
 ::: {.callout-tip appearance="simple"}
-When you start to analyse your data, create a new RProject as a first step. Making a RProject will automatically create a file with the .proj extension. Make sure to save this file together with all additional scripts in one folder. In addition, put your data into a subfolder titled "data". This subfolder is located in the same folder as your .rproj file and scripts.
+When you start to analyse your data, create a new RProject as a first step. Making a RProject will automatically create a file with the .proj extension. Make sure to save this file together with all additional scripts in one folder. In addition, put your data into a subfolder titled "data". This subfolder is located in the same folder as your `.Rproj`-file and scripts.
 :::
 
 ::: {.callout-caution appearance="simple"}

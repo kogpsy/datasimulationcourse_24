@@ -131,7 +131,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <a href="./">Data Simulation Workshop</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/kogpsy/datasimulationcourse_24" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./Data-Simulation-Workshop.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
@@ -176,12 +175,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./datawrangling2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data wrangling using the <code>tidyverse</code></span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./datavisualization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data visualization</span></span></a>
   </div>
 </li>
     </ul>
@@ -229,8 +222,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </p>
 <section id="csv-format" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="csv-format"><span class="header-section-number">2.1</span> CSV format</h2>
-<p>We will read data in r by loading the example data DatasaurusDozen.csv. You can download the zip file containing the data here.</p>
-<p>After saving the unzipped downloaded file in the same folder as your <code>.Rproj</code>, you can import the file with the following line of code:</p>
+<p>We will read data in r by loading the example data <code>DatasaurusDozen.csv</code>. You can download the zip file containing the data <a href=".\downloadable_files/data.zip">here</a>.</p>
+<p>After saving the unzipped downloaded folder <code>data</code> in the same folder as your <code>.Rproj</code>, you can import the file with the following line of code:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>dino_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/DatasaurusDozen.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
@@ -306,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you save your data in a designated <code>data</code> folder located on the same level as your .rproj file, you should not encounter any error messages regarding your working directory. Do not forget to start your R-session by opening your <code>.Rproj</code>-file (<strong>not</strong> by opening your scripts).</p>
+<p>If you save your data in a designated <code>data</code> folder located on the same level as your <code>.Rproj</code>-file, you should not encounter any error messages regarding your working directory. Do not forget to start your R-session by opening your <code>.Rproj</code>-file (<strong>not</strong> by opening your scripts).</p>
 </div>
 </div>
 

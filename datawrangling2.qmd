@@ -1,7 +1,7 @@
 # Data wrangling using the `tidyverse`
 
 \
-\
+
 The [tidyverse](https://www.tidyverse.org/) is a collection of R packages designed for data science. More information on the tidyverse can be found [here](https://r4ds.had.co.nz/).
 
 The tidyverse collection can be downloaded and loaded directly in R:
