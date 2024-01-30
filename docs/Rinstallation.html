@@ -173,7 +173,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datawrangling2.html" class="sidebar-item-text sidebar-link">
+  <a href="./datawrangling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data wrangling using the <code>tidyverse</code></span></span></a>
   </div>
 </li>
@@ -195,7 +195,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#working-with-r-projects-and-r-markdown" id="toc-working-with-r-projects-and-r-markdown" class="nav-link active" data-scroll-target="#working-with-r-projects-and-r-markdown"><span class="header-section-number">1.1</span> Working with R projects and R Markdown</a></li>
+  <li><a href="#working-with-r-projects-and-r-markdown" id="toc-working-with-r-projects-and-r-markdown" class="nav-link active" data-scroll-target="#working-with-r-projects-and-r-markdown"><span class="header-section-number">1.1</span> Working with R projects and R Markdown</a>
+  <ul class="collapse">
+  <li><a href="#rmarkdown" id="toc-rmarkdown" class="nav-link" data-scroll-target="#rmarkdown"><span class="header-section-number">1.1.1</span> RMarkdown</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -295,8 +298,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To initialise a new R-session, do so by opening the <code>.Rproj</code>-file and <strong>not</strong> by opening your R scripts. Doing so will ensure that your working directory is set up correctly.</p>
 </div>
 </div>
+<section id="rmarkdown" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="rmarkdown"><span class="header-section-number">1.1.1</span> RMarkdown</h3>
+<p>RMarkdown is a formatting language. It allows you to combine your code, results from your data analyses such as plots as well as written text chunks into a formatted and reproducible document. Its advantages lie in the reproducibility of your results since your code, your results from the analyses, your hypotheses, instructions, and even your conclusion can all be found in one document. In order to use RMarkdown, you will have to install the package <code>rmarkdown</code>.</p>
+<p>Try to knit (= creating the document by executing the R code chunks and creating a R markdown (.md) document) the following two files:</p>
+<ul>
+<li><p><a href=".\downloadable_files/faux-stub.Rmd">file1</a></p></li>
+<li><p><a href=".\downloadable_files/mixed-stub.Rmd">file2</a></p></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
