@@ -16,7 +16,7 @@ book:
     - introduction.qmd
     - Rinstallation.qmd
     - dataimport.qmd
-    - datawrangling2.qmd
+    - datawrangling.qmd
     - datavisualization.qmd
     #- ressources.qmd
     #- references.qmd

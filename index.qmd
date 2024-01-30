@@ -30,19 +30,21 @@ Room: B102, Fabrikstrasse 8, 3012 Bern
 
 During these two course days, Prof. Dr. Lisa deBruine will give a hands-on introduction to data simulation. It is best to bring your own data to work on during the workshop.
 
-<!-- If you do not have any data, we can provide a sample data set for you. -->
-
 ## Course prerequisites for day 2 and 3
+
+**Please make sure you have everything ready before the beginning of course day 2!**
 
 -   R and RStudio installed on a laptop,
 
 -   basic knowledge of R(Studio) and R Markdown,
 
--   installed packages ({faux}, {afex}, {broom}, {tidyverse}, and {lme4} from CRAN),
+-   installed packages ({faux}, {afex}, {broom}, {broom.mixed}, {tidyverse}, {lme4} and {rmarkdown}),
 
--   if possible: bring your own data sets, information on planned analyses, etc.
+-   download these 2 `Rmarkdown`-files ([file1](/downloadable_files/faux-stub.Rmd) and [file2](/downloadable_files/mixed-stub.Rmd) and **knit** both of them - if that works out fine all packages are installed correctly and you are set up.
 
-(Support for installing R and RStudio/ packages, and a basic introduction in R will be provided on day 1 of this course)
+-   if available: bring your own data sets, information on planned analyses, etc.
+
+(Support for installing R and RStudio/ packages, knit `Rmarkdown`-files and a basic introduction in R will be provided on January 31 at the first day of this course.)
 
 ## About: Prof. Lisa deBruine
 
