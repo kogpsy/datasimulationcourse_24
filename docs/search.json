@@ -1,9 +1,0 @@
-[
-  {
-    "objectID": "Rinstallation.html#working-with-r-projects-and-r-markdown",
-    "href": "Rinstallation.html#working-with-r-projects-and-r-markdown",
-    "title": "1  Installing R and RStudio",
-    "section": "1.1 Working with R projects and R Markdown",
-    "text": "1.1 Working with R projects and R Markdown\nRStudio projects provide a useful workflow for working with R. By using projects, you will have all of your files (e.g. data or scripts) accessible to your current R session. In short, R projects set the working directory.\n\n\n\n\n\n\n\n\n\n\nWhen you start to analyse your data, create a new RProject as a first step. Making a RProject will automatically create a file with the .proj extension. Make sure to save this file together with all additional scripts in one folder. In addition, put your data into a subfolder titled “data”. This subfolder is located in the same folder as your .Rproj-file and scripts.\n\n\n\n\n\n\n\n\n\n\n\n\nTo initialise a new R-session, do so by opening the .Rproj-file and not by opening your R scripts. Doing so will ensure that your working directory is set up correctly.\n\n\n\n1.1.1 RMarkdown\nRMarkdown is a formatting language. It allows you to combine your code, results from your data analyses such as plots as well as written text chunks into a formatted and reproducible document. Its advantages lie in the reproducibility of your results since your code, your results from the analyses, your hypotheses, instructions, and even your conclusion can all be found in one document. In order to use RMarkdown, you will have to install the package rmarkdown.\nTry to knit (= creating the document by executing the R code chunks and creating a R markdown (.md) document) the following two files:\n\nfile1\nfile2"
-  }
-]

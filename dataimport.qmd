@@ -52,3 +52,21 @@ If the following error message appears, it means that your working directory is 
 ::: {.callout-important appearance="simple"}
 If you save your data in a designated `data` folder located on the same level as your `.Rproj`-file, you should not encounter any error messages regarding your working directory. Do not forget to start your R-session by opening your `.Rproj`-file (**not** by opening your scripts).
 :::
+
+## Save data
+
+You can also save data from your R session as csv files. Before you can export your data from R, you will have to transform your data into a DataFrame. You can do so by adapting the following line of code:
+
+```{r eval=FALSE, include=TRUE}
+    dataFrame <- data.frame(column1 = c("val 1", "val 2", "val 3", ...),
+                            column2 = c("val1", "val 2", "val 3", ...)
+                            )
+```
+
+Afterwards, you can export your data by using the `write.csv()`-function: 
+
+```{r eval=FALSE, include=TRUE}
+    write.csv(dataFrame, "path of where you want to save your file/example_data.csv")
+```
+At the end of the file path, you specify the file name (here "example_data.csv").
+
