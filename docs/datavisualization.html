@@ -238,26 +238,24 @@ Even art can be created with the <code>ggplot</code>-library as shown <a href="h
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>d_summary <span class="ot">&lt;-</span> d <span class="sc">|&gt;</span> <span class="fu">group_by</span>(condition) <span class="sc">|&gt;</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">mean_x =</span> <span class="fu">mean</span>(x),</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">sd_x =</span> <span class="fu">sd</span>(x),</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">mean_y =</span> <span class="fu">mean</span>(y),</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">sd_y =</span> <span class="fu">sd</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">mean_y =</span> <span class="fu">mean</span>(y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A graph contains always:</p>
 <ul>
-<li><p><strong>data</strong></p></li>
-<li><p><strong>geoms</strong>, visible forms (<em>aesthetics</em>) such as points, lines or boxes.</p></li>
-<li><p><strong>a coordinate systems / mapping</strong> describes how data and geoms are linked, also colors or grouping variables are specified here</p></li>
+<li><p><strong><em>data</em></strong></p></li>
+<li><p><strong><em>geoms</em></strong>, visible forms (<em>aesthetics</em>) such as points, lines or boxes.</p></li>
+<li><p><strong><em>a coordinate systems / mapping</em></strong> describes how data and geoms are linked, also colors or grouping variables are specified here</p></li>
 </ul>
 <p>Further components could be:</p>
 <ul>
 <li><p>statistical parameters</p></li>
 <li><p>positions</p></li>
 <li><p>coordinate functions</p></li>
-<li><p><strong>facets</strong></p></li>
+<li><p><strong><em>facets</em></strong></p></li>
 <li><p>scales</p></li>
-<li><p><strong>themes</strong></p></li>
+<li><p><strong><em>themes</em></strong></p></li>
 </ul>
-<p>(we will only cover the contents in <strong>bold</strong>)</p>
+<p>(we will only cover the contents in italics)</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -269,15 +267,15 @@ Good to know
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p>It is easiest when your data is in <em>long</em> format.</p></li>
-<li><p>What variables do you want to plot (categorical? continuous? …)</p></li>
+<li><p>For plotting with <code>ggplot()</code> it is easiest when your data is in <em>long</em> format.</p></li>
+<li><p>What variables do you want to plot (categorical? continuous? …) affects which <code>geoms</code>can be used. You can try out what is suited with the <code>esquisse</code>-package below or find ideas <a href="https://www.data-to-viz.com">here</a>.</p></li>
 </ul>
 </div>
 </div>
 </section>
 <section id="data-geoms-and-mapping" class="level2 page-columns page-full" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="data-geoms-and-mapping"><span class="header-section-number">4.2</span> Data, geoms and mapping</h2>
-<p>We start with entering the current data frame and add geoms and mappings (<code>aes()</code>) with arguments such as</p>
+<p>We start with entering the current data frame and add <code>geoms</code> and mappings (specified with <code>aes()</code>) with arguments such as</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(d_summary, <span class="co"># data</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> mean_x, <span class="at">y =</span> mean_y)) <span class="sc">+</span> <span class="co"># mapping</span></span>
@@ -298,7 +296,7 @@ Good to know
 <li>violin plots: <code>geom_violin()</code></li>
 </ul>
 <aside>
-[Here]https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf) you can download <code>ggplot</code>-Cheatsheet(
+<a href="https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf">Here</a> you can download <code>ggplot</code>-Cheatsheet
 </aside>
 </section>
 <section id="facets" class="level2" data-number="4.3">
@@ -314,7 +312,7 @@ Good to know
 </div>
 </div>
 </section>
-<section id="themes-and-labels" class="level2" data-number="4.4">
+<section id="themes-and-labels" class="level2 page-columns page-full" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="themes-and-labels"><span class="header-section-number">4.4</span> Themes and labels</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> d,</span>
@@ -322,9 +320,10 @@ Good to know
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> y)) <span class="sc">+</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggtitle</span> (<span class="st">"Title"</span>) <span class="sc">+</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Value 1 [a.u.]"</span>) <span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="st">"Value 2 [a.u.]"</span>) <span class="sc">+</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="co"># also theme_classic and theme_minimal are nice</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Title"</span>, </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="st">"Variable A  [a.u.]"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="st">"Variable B [a.u.]"</span>) <span class="sc">+</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="co"># also theme_classic and theme_minimal are nice</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="datavisualization_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -335,7 +334,7 @@ Good to know
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-`esquisse`-package
+<code>esquisse</code>-package
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -347,14 +346,17 @@ Good to know
 </div>
 </div>
 </div>
+<aside>
+If we do not want to load the whole library we can call the function by writing the library name then <code>::</code> and the function afterwards such as <code>esquisse::esquisser()</code>. This is helpful when libraries have overlapping function names which can create conflicts or to easily call a function without typing <code>library()</code> first.
+</aside>
 <p>Further helpful ressources:</p>
 <ul>
-<li><p><a href="https://ggplot2.tidyverse.org/"><code>ggplot</code>documentation</a></p></li>
+<li><p><a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code>documentation</a></p></li>
 <li><p><a href="https://psyteachr.github.io/reprores-v3">Website PsyTeachR: Data Skills for reproducible research</a></p></li>
 <li><p><a href="https://youtu.be/90IdULVGmYY">Start of the PsyTeachR videos by Lisa DeBruine</a>, e.g.&nbsp;<a href="https://youtu.be/tOFQFPRgZ3M">Basic Plots</a>, <a href="https://youtu.be/kKlQupjD__g">Common Plots</a> and <a href="https://youtu.be/6pHuCbOh86s">Plot Themes and Customization</a></p></li>
 <li><p><a href="https://methodenlehre.github.io/einfuehrung-in-R/chapters/05-plotting.html">Einführung in R</a> by Andrew Ellis and Boris</p></li>
 <li><p><a href="https://www.data-to-viz.com">Here</a> you find ideas for plots.</p></li>
-<li><p>https://rstudio-connect.psy.gla.ac.uk/plotdemo/</p></li>
+<li><p><a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo">Demo of different geoms</a></p></li>
 </ul>
 
 

@@ -20,19 +20,17 @@ d <- read.csv("data/DatasaurusDozen.csv") |>
 
 d_summary <- d |> group_by(condition) |>
     summarise(mean_x = mean(x),
-              sd_x = sd(x),
-              mean_y = mean(y),
-              sd_y = sd(x))
+              mean_y = mean(y))
     
 ```
 
 A graph contains always:
 
--   **data**
+-   ***data***
 
--   **geoms**, visible forms (*aesthetics*) such as points, lines or boxes.
+-   ***geoms***, visible forms (*aesthetics*) such as points, lines or boxes.
 
--   **a coordinate systems / mapping** describes how data and geoms are linked, also colors or grouping variables are specified here
+-   ***a coordinate systems / mapping*** describes how data and geoms are linked, also colors or grouping variables are specified here
 
 Further components could be:
 
@@ -42,25 +40,25 @@ Further components could be:
 
 -   coordinate functions
 
--   **facets**
+-   ***facets***
 
 -   scales
 
--   **themes**
+-   ***themes***
 
-(we will only cover the contents in **bold**)
+(we will only cover the contents in italics)
 
 ::: {.callout-tip appearance="simple"}
 ## Good to know
 
--   It is easiest when your data is in *long* format.
+-   For plotting with `ggplot()` it is easiest when your data is in *long* format.
 
--   What variables do you want to plot (categorical? continuous? ...)
+-   What variables do you want to plot (categorical? continuous? ...) affects which `geoms`can be used. You can try out what is suited with the `esquisse`-package below or find ideas [here](https://www.data-to-viz.com).
 :::
 
 ## Data, geoms and mapping
 
-We start with entering the current data frame and add geoms and mappings (`aes()`) with arguments such as
+We start with entering the current data frame and add `geoms` and mappings (specified with `aes()`) with arguments such as
 
 ```{r}
 ggplot(d_summary, # data
@@ -80,7 +78,7 @@ Examples of available geoms:
 -   boxplots: `geom_boxplot()`
 -   violin plots: `geom_violin()`
 
-<aside>\[Here\]https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf) you can download `ggplot`-Cheatsheet(</aside>
+<aside>[Here](https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf) you can download `ggplot`-Cheatsheet</aside>
 
 ## Facets
 
@@ -101,13 +99,14 @@ ggplot(data = d,
                      y = y)) +
     geom_point() +
     ggtitle ("Title") +
-    xlab("Value 1 [a.u.]") +
-    ylab("Value 2 [a.u.]") +
+    labs(title = "Title", 
+        x = "Variable A  [a.u.]",
+        y = "Variable B [a.u.]") +
     theme_minimal() # also theme_classic and theme_minimal are nice
 ```
 
 ::: {.callout-tip appearance="simple"}
-## \`esquisse\`-package
+## `esquisse`-package
 
 With this package you can use the data frames in your current environment or load a new one to try out which geoms might be useful
 
@@ -120,9 +119,11 @@ esquisse::esquisser()
 ```
 :::
 
+<aside>If we do not want to load the whole library we can call the function by writing the library name then `::` and the function afterwards such as `esquisse::esquisser()`. This is helpful when libraries have overlapping function names which can create conflicts or to easily call a function without typing `library()` first.</aside>
+
 Further helpful ressources:
 
--   [`ggplot`documentation](https://ggplot2.tidyverse.org/)
+-   [`ggplot2`documentation](https://ggplot2.tidyverse.org/)
 
 -   [Website PsyTeachR: Data Skills for reproducible research](https://psyteachr.github.io/reprores-v3)
 
@@ -132,4 +133,4 @@ Further helpful ressources:
 
 -   [Here](https://www.data-to-viz.com) you find ideas for plots.
 
--   https://rstudio-connect.psy.gla.ac.uk/plotdemo/
+- [Demo of different geoms](https://rstudio-connect.psy.gla.ac.uk/plotdemo)

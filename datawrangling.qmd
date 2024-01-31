@@ -75,7 +75,7 @@ Data visualization and analysis is often easier in this format. If your data is 
 
 -   each measurement has one column
 
--   each entity (e.g. person) has one column
+-   each entity (e.g. person) has one row
 
 This data format makes it easy to spot missing values or outliers and count how many observations you have.
 
