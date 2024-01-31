@@ -120,18 +120,16 @@ esquisse::esquisser()
 ```
 :::
 
-
-
 Further helpful ressources:
 
-- [`ggplot`documentation](https://ggplot2.tidyverse.org/)
+-   [`ggplot`documentation](https://ggplot2.tidyverse.org/)
 
-- [Website PsyTeachR: Data Skills for reproducible research](https://psyteachr.github.io/reprores-v3)
+-   [Website PsyTeachR: Data Skills for reproducible research](https://psyteachr.github.io/reprores-v3)
 
-- [Start of the PsyTeachR videos by Lisa DeBruine](https://youtu.be/90IdULVGmYY), e.g. [Basic Plots](https://youtu.be/tOFQFPRgZ3M), [Common Plots](https://youtu.be/kKlQupjD__g) and [Plot Themes and Customization](https://youtu.be/6pHuCbOh86s)
+-   [Start of the PsyTeachR videos by Lisa DeBruine](https://youtu.be/90IdULVGmYY), e.g. [Basic Plots](https://youtu.be/tOFQFPRgZ3M), [Common Plots](https://youtu.be/kKlQupjD__g) and [Plot Themes and Customization](https://youtu.be/6pHuCbOh86s)
 
-- [Einführung in R](https://methodenlehre.github.io/einfuehrung-in-R/chapters/05-plotting.html) by Andrew Ellis and Boris 
+-   [Einführung in R](https://methodenlehre.github.io/einfuehrung-in-R/chapters/05-plotting.html) by Andrew Ellis and Boris
 
-- [Here](https://www.data-to-viz.com) you find ideas for plots.
+-   [Here](https://www.data-to-viz.com) you find ideas for plots.
 
-- https://rstudio-connect.psy.gla.ac.uk/plotdemo/
+-   https://rstudio-connect.psy.gla.ac.uk/plotdemo/
