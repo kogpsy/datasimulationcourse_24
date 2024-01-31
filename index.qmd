@@ -28,7 +28,7 @@ Lunch break: 12:00-13:00 *Lunch will not be provided (Mensa/ Cafeteria is open)*
 
 Room: B102, Fabrikstrasse 8, 3012 Bern
 
-During these two course days, Prof. Dr. Lisa deBruine will give a hands-on introduction to data simulation. It is best to bring your own data to work on during the workshop.
+During these two course days, Prof. Dr. Lisa DeBruine will give a hands-on introduction to data simulation. It is best to bring your own data to work on during the workshop.
 
 ## Course prerequisites for day 2 and 3
 
@@ -46,9 +46,9 @@ During these two course days, Prof. Dr. Lisa deBruine will give a hands-on intro
 
 (Support for installing R and RStudio/ packages, knit `Rmarkdown`-files and a basic introduction in R will be provided on January 31 at the first day of this course.)
 
-## About: Prof. Lisa deBruine
+## About: Prof. Lisa DeBruine
 
-Prof. Dr. Lisa deBruine is a professor of psychology at the University of Glasgow School of Psychology and Neuroscience. She created the R package {faux} to facilitate data simulation for multilevel modelling.
+Lisa DeBruine is a professor of psychology at the University of Glasgow School of Psychology and Neuroscience. She created the R package {faux} to facilitate data simulation for multilevel modelling.
 
 ***For more information,** visit:*
 

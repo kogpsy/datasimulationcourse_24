@@ -10,7 +10,7 @@ You will have to install R and RStudio separately. R
 
 In addition, we will need to install the following packages:
 
--   `tidyverse`, `ggplot`, `faux`, `lme4`, `broom`, `afex`
+-   `tidyverse`, `ggplot`, `faux`, `lme4`, `broom`, `broom.mixed`, `afex`, `rmarkdown``
 
 -   We can install packages with the following line of code:
 

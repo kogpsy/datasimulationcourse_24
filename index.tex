@@ -190,7 +190,7 @@
 \makeatletter
 \makeatother
 \makeatletter
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, interior hidden, breakable]}{\end{tcolorbox}}\fi
 \makeatother
 \makeatletter
 \@ifpackageloaded{sidenotes}{}{\usepackage{sidenotes}}
@@ -216,7 +216,7 @@
 
 \title{Data Simulation Workshop}
 \author{Rahel Steuri \& Gerda Wyssen}
-\date{2024-01-30}
+\date{2024-01-31}
 
 \begin{document}
 \maketitle
@@ -285,7 +285,7 @@ Cafeteria is open)}
 
 Room: B102, Fabrikstrasse 8, 3012 Bern
 
-During these two course days, Prof.~Dr.~Lisa deBruine will give a
+During these two course days, Prof.~Dr.~Lisa DeBruine will give a
 hands-on introduction to data simulation. It is best to bring your own
 data to work on during the workshop.
 
@@ -323,14 +323,14 @@ of course day 2!}
 on January 31 at the first day of this course.)
 
 \hypertarget{about-prof.-lisa-debruine}{%
-\section*{About: Prof.~Lisa deBruine}\label{about-prof.-lisa-debruine}}
-\addcontentsline{toc}{section}{About: Prof.~Lisa deBruine}
+\section*{About: Prof.~Lisa DeBruine}\label{about-prof.-lisa-debruine}}
+\addcontentsline{toc}{section}{About: Prof.~Lisa DeBruine}
 
-\markright{About: Prof.~Lisa deBruine}
+\markright{About: Prof.~Lisa DeBruine}
 
-Prof.~Dr.~Lisa deBruine is a professor of psychology at the University
-of Glasgow School of Psychology and Neuroscience. She created the R
-package \{faux\} to facilitate data simulation for multilevel modelling.
+Lisa DeBruine is a professor of psychology at the University of Glasgow
+School of Psychology and Neuroscience. She created the R package
+\{faux\} to facilitate data simulation for multilevel modelling.
 
 \emph{\textbf{For more information,} visit:}
 
@@ -497,7 +497,7 @@ In addition, we will need to install the following packages:
 \begin{itemize}
 \item
   \texttt{tidyverse}, \texttt{ggplot}, \texttt{faux}, \texttt{lme4},
-  \texttt{broom}, \texttt{afex}
+  \texttt{broom}, \texttt{broom.mixed}, \texttt{afex}, `rmarkdown``
 \item
   We can install packages with the following line of code:
 \end{itemize}
@@ -520,7 +520,7 @@ In addition, we will need to install the following packages:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-warning-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-warning-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-warning-color}{\faExclamationTriangle}
 \end{minipage}%
@@ -534,7 +534,7 @@ not have to put the name into quotation marks.
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-important-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-important-color}{\faExclamation}
 \end{minipage}%
@@ -557,7 +557,7 @@ projects, you will have all of your files (e.g.~data or scripts)
 accessible to your current R session. In short, R projects set the
 working directory.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-tip-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -573,7 +573,7 @@ titled ``data''. This subfolder is located in the same folder as your
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-caution-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-caution-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-caution-color}{\faFire}
 \end{minipage}%
@@ -633,7 +633,7 @@ following line of code:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-tip-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -657,7 +657,7 @@ following line of code:
 Importing data from Excel into R, you can use the
 \texttt{read\_excel()}-function.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-important-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-important-color}{\faExclamation}
 \end{minipage}%
@@ -692,7 +692,7 @@ ways to check your imported data.
 \hypertarget{common-import-mistakes}{%
 \subsection{Common import mistakes}\label{common-import-mistakes}}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-tip-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -710,7 +710,7 @@ directory is not set correctly.
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-important-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-important-color}{\faExclamation}
 \end{minipage}%
@@ -724,6 +724,33 @@ by opening your scripts).
 
 \end{minipage}%
 \end{tcolorbox}
+
+\hypertarget{save-data}{%
+\section{Save data}\label{save-data}}
+
+You can also save data from your R session as csv files. Before you can
+export your data from R, you will have to transform your data into a
+DataFrame. You can do so by adapting the following line of code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{    dataFrame }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{column1 =} \FunctionTok{c}\NormalTok{(}\StringTok{"val 1"}\NormalTok{, }\StringTok{"val 2"}\NormalTok{, }\StringTok{"val 3"}\NormalTok{, ...),}
+                            \AttributeTok{column2 =} \FunctionTok{c}\NormalTok{(}\StringTok{"val1"}\NormalTok{, }\StringTok{"val 2"}\NormalTok{, }\StringTok{"val 3"}\NormalTok{, ...)}
+\NormalTok{                            )}
+\end{Highlighting}
+\end{Shaded}
+
+Afterwards, you can export your data by using the
+\texttt{write.csv()}-function:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+    \FunctionTok{write.csv}\NormalTok{(dataFrame, }\StringTok{"path of where you want to save your file/example\_data.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+At the end of the file path, you specify the file name (here
+``example\_data.csv'').
 
 \bookmarksetup{startatroot}
 
@@ -752,7 +779,7 @@ The tidyverse collection can be downloaded and loaded directly in R:
 Functions of the \texttt{tidyverse} allow you to perform data wrangling
 easily.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-tip-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -870,7 +897,7 @@ count how many observations you have.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-tip-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -962,7 +989,7 @@ $ measure   <chr> "x", "x", "x", "x", "y", "y", "y", "y", "x", "x", "x", "x", ~
 $ value     <dbl> 32.33111, 51.20389, 55.99303, 55.38460, 61.41110, 83.33978, ~
 \end{verbatim}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-tip-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1259,7 +1286,7 @@ Further components could be:
 
 (we will only cover the contents in \textbf{bold})
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-tip-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1375,7 +1402,7 @@ With facets you can show subsets of your data in different panels
 
 \end{figure}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, left=2mm, arc=.35mm, toprule=.15mm, opacityback=0, colback=white, rightrule=.15mm, breakable, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, colback=white, colframe=quarto-callout-tip-color-frame, left=2mm, leftrule=.75mm, breakable, bottomrule=.15mm, arc=.35mm, opacityback=0, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%

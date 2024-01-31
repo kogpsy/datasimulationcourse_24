@@ -201,6 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#common-import-mistakes" id="toc-common-import-mistakes" class="nav-link" data-scroll-target="#common-import-mistakes"><span class="header-section-number">2.3.1</span> Common import mistakes</a></li>
   </ul></li>
+  <li><a href="#save-data" id="toc-save-data" class="nav-link" data-scroll-target="#save-data"><span class="header-section-number">2.4</span> Save data</a></li>
   </ul>
 </nav>
     </div>
@@ -308,9 +309,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If you save your data in a designated <code>data</code> folder located on the same level as your <code>.Rproj</code>-file, you should not encounter any error messages regarding your working directory. Do not forget to start your R-session by opening your <code>.Rproj</code>-file (<strong>not</strong> by opening your scripts).</p>
 </div>
 </div>
-
-
 </section>
+</section>
+<section id="save-data" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="save-data"><span class="header-section-number">2.4</span> Save data</h2>
+<p>You can also save data from your R session as csv files. Before you can export your data from R, you will have to transform your data into a DataFrame. You can do so by adapting the following line of code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>    dataFrame <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">column1 =</span> <span class="fu">c</span>(<span class="st">"val 1"</span>, <span class="st">"val 2"</span>, <span class="st">"val 3"</span>, ...),</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                            <span class="at">column2 =</span> <span class="fu">c</span>(<span class="st">"val1"</span>, <span class="st">"val 2"</span>, <span class="st">"val 3"</span>, ...)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                            )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Afterwards, you can export your data by using the <code>write.csv()</code>-function:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write.csv</span>(dataFrame, <span class="st">"path of where you want to save your file/example_data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>At the end of the file path, you specify the file name (here “example_data.csv”).</p>
+
+
 </section>
 
 </main> <!-- /main -->
