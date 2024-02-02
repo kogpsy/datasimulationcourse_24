@@ -183,6 +183,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data visualization</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ressources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ressources</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -206,7 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -227,9 +233,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p><br>
 </p>
-<section id="csv-format" class="level2" data-number="2.1">
+<section id="csv-format" class="level2 page-columns page-full" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="csv-format"><span class="header-section-number">2.1</span> CSV format</h2>
 <p>We will read data in r by loading the example data <code>DatasaurusDozen.csv</code>. You can download the zip file containing the data <a href=".\downloadable_files/data.zip">here</a>.</p>
+<aside>
+The data we used is from Matejka and Fitzmaurice (2017) and can be found <a href="https://dl.acm.org/doi/10.1145/3025453.3025912">here</a>
+</aside>
 <p>After saving the unzipped downloaded folder <code>data</code> in the same folder as your <code>.Rproj</code>, you can import the file with the following line of code:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>

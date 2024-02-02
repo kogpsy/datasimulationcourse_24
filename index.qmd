@@ -1,6 +1,14 @@
 # Welcome {.unnumbered}
 
-We are looking forward to meeting you at the "Data Simulation Workshop 2024" in Bern at the Institute of Psychology from the 31.01.2024 - 02.02.2024.
+\
+
+It was a pleasure to meet you at the "Data Simulation Workshop 2024" in Bern at the Institute of Psychology from the 31.01.2024 - 02.02.2024. Thanks for joining!
+
+On the last page under *Ressources* you will find the scripts we used and further links.
+
+Enjoy simulating!
+
+------------------------------------------------------------------------
 
 Here, you will find the most important information about the course.
 

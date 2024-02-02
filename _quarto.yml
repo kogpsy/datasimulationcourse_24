@@ -18,7 +18,7 @@ book:
     - dataimport.qmd
     - datawrangling.qmd
     - datavisualization.qmd
-    #- ressources.qmd
+    - ressources.qmd
     #- references.qmd
 
 bibliography: references.bib

@@ -190,7 +190,7 @@
 \makeatletter
 \makeatother
 \makeatletter
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, frame hidden, breakable, sharp corners, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, interior hidden, boxrule=0pt, frame hidden, breakable]}{\end{tcolorbox}}\fi
 \makeatother
 \makeatletter
 \@ifpackageloaded{sidenotes}{}{\usepackage{sidenotes}}
@@ -216,7 +216,7 @@
 
 \title{Data Simulation Workshop}
 \author{Rahel Steuri \& Gerda Wyssen}
-\date{2024-01-31}
+\date{2024-02-02}
 
 \begin{document}
 \maketitle
@@ -234,9 +234,18 @@
 
 \markboth{Welcome}{Welcome}
 
-We are looking forward to meeting you at the ``Data Simulation Workshop
-2024'' in Bern at the Institute of Psychology from the 31.01.2024 -
-02.02.2024.
+\hfill\break
+
+It was a pleasure to meet you at the ``Data Simulation Workshop 2024''
+in Bern at the Institute of Psychology from the 31.01.2024 - 02.02.2024.
+Thanks for joining!
+
+On the last page under \emph{Ressources} you will find the scripts we
+used and further links.
+
+Enjoy simulating!
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 Here, you will find the most important information about the course.
 
@@ -520,7 +529,7 @@ In addition, we will need to install the following packages:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-warning-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-warning-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-warning-color}{\faExclamationTriangle}
 \end{minipage}%
@@ -534,7 +543,7 @@ not have to put the name into quotation marks.
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-important-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-important-color}{\faExclamation}
 \end{minipage}%
@@ -557,7 +566,7 @@ projects, you will have all of your files (e.g.~data or scripts)
 accessible to your current R session. In short, R projects set the
 working directory.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -573,7 +582,7 @@ titled ``data''. This subfolder is located in the same folder as your
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-caution-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-caution-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-caution-color}{\faFire}
 \end{minipage}%
@@ -621,6 +630,13 @@ We will read data in r by loading the example data
 \texttt{DatasaurusDozen.csv}. You can download the zip file containing
 the data \href{./downloadable_files/data.zip}{here}.
 
+\marginnote{\begin{footnotesize}
+
+The data we used is from Matejka and Fitzmaurice (2017) and can be found
+\href{https://dl.acm.org/doi/10.1145/3025453.3025912}{here}
+
+\end{footnotesize}}
+
 After saving the unzipped downloaded folder \texttt{data} in the same
 folder as your \texttt{.Rproj}, you can import the file with the
 following line of code:
@@ -633,7 +649,7 @@ following line of code:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -657,7 +673,7 @@ following line of code:
 Importing data from Excel into R, you can use the
 \texttt{read\_excel()}-function.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-important-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-important-color}{\faExclamation}
 \end{minipage}%
@@ -692,7 +708,7 @@ ways to check your imported data.
 \hypertarget{common-import-mistakes}{%
 \subsection{Common import mistakes}\label{common-import-mistakes}}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -710,7 +726,7 @@ directory is not set correctly.
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-important-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-important-color}{\faExclamation}
 \end{minipage}%
@@ -779,7 +795,7 @@ The tidyverse collection can be downloaded and loaded directly in R:
 Functions of the \texttt{tidyverse} allow you to perform data wrangling
 easily.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -897,7 +913,7 @@ count how many observations you have.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -989,7 +1005,7 @@ $ measure   <chr> "x", "x", "x", "x", "y", "y", "y", "y", "x", "x", "x", "x", ~
 $ value     <dbl> 32.33111, 51.20389, 55.99303, 55.38460, 61.41110, 83.33978, ~
 \end{verbatim}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1252,6 +1268,13 @@ Even art can be created with the \texttt{ggplot}-library as shown
 \end{Highlighting}
 \end{Shaded}
 
+\marginnote{\begin{footnotesize}
+
+The data we used is from Matejka and Fitzmaurice (2017) and can be found
+\href{https://dl.acm.org/doi/10.1145/3025453.3025912}{here}
+
+\end{footnotesize}}
+
 A graph contains always:
 
 \begin{itemize}
@@ -1284,7 +1307,7 @@ Further components could be:
 
 (we will only cover the contents in italics)
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1405,7 +1428,7 @@ With facets you can show subsets of your data in different panels
 
 \end{figure}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, colback=white, opacityback=0, leftrule=.75mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, breakable, toprule=.15mm, opacityback=0, colframe=quarto-callout-tip-color-frame, colback=white, rightrule=.15mm, bottomrule=.15mm, leftrule=.75mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1452,12 +1475,77 @@ Further helpful ressources:
   \href{https://youtu.be/6pHuCbOh86s}{Plot Themes and Customization}
 \item
   \href{https://methodenlehre.github.io/einfuehrung-in-R/chapters/05-plotting.html}{Einführung
-  in R} by Andrew Ellis and Boris
+  in R} by Andrew Ellis and Boris Mayer
 \item
   \href{https://www.data-to-viz.com}{Here} you find ideas for plots.
 \item
   \href{https://rstudio-connect.psy.gla.ac.uk/plotdemo}{Demo of
   different geoms}
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{ressources}{%
+\chapter*{Ressources}\label{ressources}}
+\addcontentsline{toc}{chapter}{Ressources}
+
+\markboth{Ressources}{Ressources}
+
+\hfill\break
+
+\hypertarget{rmd-files-we-used-in-the-workshop}{%
+\section*{\texorpdfstring{\texttt{.Rmd}-Files we used in the
+workshop}{.Rmd-Files we used in the workshop}}\label{rmd-files-we-used-in-the-workshop}}
+\addcontentsline{toc}{section}{\texttt{.Rmd}-Files we used in the
+workshop}
+
+\markright{\texttt{.Rmd}-Files we used in the workshop}
+
+\begin{itemize}
+\item
+  \href{./downloadable_files/faux-stub_extended.Rmd}{Faux Stub extended
+  version}
+\item
+  \href{./downloadable_files/mixed-stub_extended.Rmd}{Mixed Stub
+  extended version}
+\item
+  \href{./downloadable_files/hidden_residuals.Rmd}{Hidden Residuals
+  Example}
+\item
+  \href{./downloadable_files/commons-footprint.Rmd}{Commons Footprint
+  Example}
+\end{itemize}
+
+\hypertarget{helpful-online-books-and-websites}{%
+\section*{Helpful online books and
+websites}\label{helpful-online-books-and-websites}}
+\addcontentsline{toc}{section}{Helpful online books and websites}
+
+\markright{Helpful online books and websites}
+
+\begin{itemize}
+\item
+  \href{https://debruine.github.io/faux/index.html}{Faux Package
+  Vignette}
+\item
+  \href{https://shiny.psy.gla.ac.uk/debruine/fauxapp}{Faux Data
+  Simulation GUI}
+\item
+  \href{https://journals.sagepub.com/doi/10.1177/2515245920965119}{Understanding
+  Mixed-Effects Models Through Data Simulation}
+\item
+  \href{https://michelenuijten.shinyapps.io/statcheck-web}{StatCheck}
+\item
+  \href{https://psyteachr.github.io/reprores-v3}{Website PsyTeachR: Data
+  Skills for reproducible research}
+\item
+  \href{https://youtu.be/90IdULVGmYY}{Start of the PsyTeachR videos by
+  Lisa DeBruine}, e.g.~\href{https://youtu.be/tOFQFPRgZ3M}{Basic Plots},
+  \href{https://youtu.be/kKlQupjD__g}{Common Plots} and
+  \href{https://youtu.be/6pHuCbOh86s}{Plot Themes and Customization}
+\item
+  \href{https://r4ds.had.co.nz}{R for Datascience}: Online book by
+  Hadley Wickham and Garrett Grolemund.
 \end{itemize}
 
 

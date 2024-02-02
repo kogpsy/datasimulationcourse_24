@@ -24,6 +24,9 @@ d_summary <- d |> group_by(condition) |>
     
 ```
 
+<aside>The data we used is from Matejka and Fitzmaurice (2017) and can be found [here](https://dl.acm.org/doi/10.1145/3025453.3025912)</aside>
+
+
 A graph contains always:
 
 -   ***data***
@@ -129,8 +132,8 @@ Further helpful ressources:
 
 -   [Start of the PsyTeachR videos by Lisa DeBruine](https://youtu.be/90IdULVGmYY), e.g. [Basic Plots](https://youtu.be/tOFQFPRgZ3M), [Common Plots](https://youtu.be/kKlQupjD__g) and [Plot Themes and Customization](https://youtu.be/6pHuCbOh86s)
 
--   [Einführung in R](https://methodenlehre.github.io/einfuehrung-in-R/chapters/05-plotting.html) by Andrew Ellis and Boris
+-   [Einführung in R](https://methodenlehre.github.io/einfuehrung-in-R/chapters/05-plotting.html) by Andrew Ellis and Boris Mayer
 
 -   [Here](https://www.data-to-viz.com) you find ideas for plots.
 
-- [Demo of different geoms](https://rstudio-connect.psy.gla.ac.uk/plotdemo)
+-   [Demo of different geoms](https://rstudio-connect.psy.gla.ac.uk/plotdemo)

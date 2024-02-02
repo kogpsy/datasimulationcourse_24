@@ -1,11 +1,33 @@
-# Ressources
+# Ressources {.unnumbered}
 
-## Books / Websites
+\
 
-hadley wickham (tidyverse)
+## `.Rmd`-Files we used in the workshop
 
-lisas ressources (psychteachR)
+- [Faux Stub extended version](/downloadable_files/faux-stub_extended.Rmd)
 
-## AI
+- [Mixed Stub extended version](/downloadable_files/mixed-stub_extended.Rmd)
 
-rtutor.ai
+- [Hidden Residuals Example](/downloadable_files/hidden_residuals.Rmd)
+
+- [Commons Footprint Example](/downloadable_files/commons-footprint.Rmd)
+
+
+
+## Helpful online books and websites
+
+- [Faux Package Vignette](https://debruine.github.io/faux/index.html)
+
+- [Faux Data Simulation GUI](https://shiny.psy.gla.ac.uk/debruine/fauxapp)
+
+- [Understanding Mixed-Effects Models Through Data Simulation](https://journals.sagepub.com/doi/10.1177/2515245920965119)
+
+- [StatCheck](https://michelenuijten.shinyapps.io/statcheck-web)
+
+- [Website PsyTeachR: Data Skills for reproducible research](https://psyteachr.github.io/reprores-v3)
+
+- [Start of the PsyTeachR videos by Lisa DeBruine](https://youtu.be/90IdULVGmYY), e.g. [Basic Plots](https://youtu.be/tOFQFPRgZ3M), [Common Plots](https://youtu.be/kKlQupjD__g) and [Plot Themes and Customization](https://youtu.be/6pHuCbOh86s)
+
+- [R for Datascience](https://r4ds.had.co.nz): Online book by Hadley Wickham and Garrett Grolemund.
+
+

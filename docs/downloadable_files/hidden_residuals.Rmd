@@ -1,0 +1,62 @@
+---
+title: "Hidden Residuals"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(faux)
+library(tidyverse)
+```
+
+
+Make a demo where a fixed effect exists, but is not included in the original model. How do we look at residuals to determine this is the case?
+
+
+1. simulate data with a fixed effect.
+
+
+```{r}
+str_effect <- 50
+
+dat <- add_random(sub = 100) |>
+  add_random(trial = 50) |>
+  add_between("sub", strategy = c("A", "B")) |>
+  add_contrast("strategy", colnames = "str") |>
+  add_ranef(.by = "sub", sub_i = 25) |>
+  add_ranef(.by = "trial", trial_i = 25, 
+            trial_str = 25, .cors = .2) |>
+  add_ranef(err = 50) |>
+  mutate(dv = 0 + sub_i + trial_i + err +
+           (str * (str_effect + trial_str)))
+
+ggplot(dat, aes(strategy, dv)) +
+  geom_violin()
+```
+
+
+
+Model without effect of strategy
+
+```{r}
+mod1 <- lmer(dv ~ 1 + 
+               (1 | sub) + 
+               (1 | trial),
+             data = dat)
+
+mod1
+```
+
+Plot subjects random intercepts
+
+```{r}
+dat |>
+  group_by(sub, strategy) |>
+  summarise(.groups = "drop") |>
+  mutate(i = ranef(mod1)$sub[, 1]) |>
+  ggplot(aes(i, color = strategy)) +
+  geom_freqpoly()
+```
+

@@ -1,0 +1,89 @@
+---
+title: "Commons Footprint"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(faux)
+library(tidyverse)
+library(afex)
+```
+
+```{r}
+n_prob = c(.2, .3, .5)
+
+# carbon 3 - 60, Swiss avg = 13, sd = 3 healthy = 0.6
+```
+
+```{r}
+common_n <- 10
+commons_levels = c("S", "M", "L")
+sub_n <- c(30, 200, 400) |> rep(common_n)
+income_m <- list(S = 3000, M = 4000, L = 6000)
+income_sd <- list(S = 400, M = 600, L = 800)
+
+# random effects
+common_sd = 3
+error_sd = 3
+
+# fixed effects (for 0 income)
+grand_i = 3 # mean for S group
+m_effect = +0 # M - S
+l_effect = +0 # L - S
+income_effect = 30/11000 # change in carbon from 5->40, 
+                           # with change in income from 0->11K
+m_income_effect = 0
+l_income_effect = income_effect
+
+dat <- add_random(common = common_n * 3) |>
+  add_between("common", size = commons_levels) |>
+  add_random(sub = sub_n, .nested_in = "common") |>
+  rowwise() |>
+  mutate(income = case_match(size, 
+                             "S" ~ rnorm(1, income_m$S, income_sd$S),
+                             "M" ~ rnorm(1, income_m$M, income_sd$M),
+                             "L" ~ rnorm(1, income_m$L, income_sd$L))) |>
+  ungroup() |>
+  add_contrast("size", 
+               contrast = "treatment", 
+               base = "S", 
+               colnames = commons_levels[2:3]) |>
+  add_ranef("common", common_i = common_sd) |>
+  add_ranef(err = error_sd) |>
+  mutate(carbon = grand_i + common_i + err +
+           (income_effect * income) +
+           (m_effect * M) +
+           (l_effect * L) +
+           (m_income_effect * M * income) +
+           (l_income_effect * L * income)
+         )
+```
+
+```{r}
+ggplot(dat, aes(size, income)) +
+  geom_violin()
+```
+
+```{r}
+ggplot(dat, aes(size, carbon)) +
+  geom_violin()
+```
+
+
+```{r}
+ggplot(dat, aes(income, carbon, color = size)) +
+  geom_smooth(method = lm, formula = y ~ x)
+```
+
+```{r}
+mod <- lmer(carbon ~ size*income +
+              (1 | common),
+            data = dat)
+
+summary(mod)
+```
+
+

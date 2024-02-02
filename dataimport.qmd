@@ -6,6 +6,8 @@
 
 We will read data in r by loading the example data `DatasaurusDozen.csv`. You can download the zip file containing the data [here](/downloadable_files/data.zip).
 
+<aside>The data we used is from Matejka and Fitzmaurice (2017) and can be found [here](https://dl.acm.org/doi/10.1145/3025453.3025912)</aside>
+
 After saving the unzipped downloaded folder `data` in the same folder as your `.Rproj`, you can import the file with the following line of code:
 
 ```{r}
@@ -63,10 +65,10 @@ You can also save data from your R session as csv files. Before you can export y
                             )
 ```
 
-Afterwards, you can export your data by using the `write.csv()`-function: 
+Afterwards, you can export your data by using the `write.csv()`-function:
 
 ```{r eval=FALSE, include=TRUE}
     write.csv(dataFrame, "path of where you want to save your file/example_data.csv")
 ```
-At the end of the file path, you specify the file name (here "example_data.csv").
 
+At the end of the file path, you specify the file name (here "example_data.csv").

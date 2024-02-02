@@ -10,7 +10,7 @@ You will have to install R and RStudio separately. R
 
 In addition, we will need to install the following packages:
 
--   `tidyverse`, `ggplot`, `faux`, `lme4`, `broom`, `broom.mixed`, `afex`, `rmarkdown``
+-   `tidyverse`, `ggplot`, `faux`, `lme4`, `broom`, `broom.mixed`, `afex`, \`rmarkdown\`\`
 
 -   We can install packages with the following line of code:
 
@@ -44,14 +44,12 @@ When you start to analyse your data, create a new RProject as a first step. Maki
 To initialise a new R-session, do so by opening the `.Rproj`-file and **not** by opening your R scripts. Doing so will ensure that your working directory is set up correctly.
 :::
 
-
 ### RMarkdown
 
 RMarkdown is a formatting language. It allows you to combine your code, results from your data analyses such as plots as well as written text chunks into a formatted and reproducible document. Its advantages lie in the reproducibility of your results since your code, your results from the analyses, your hypotheses, instructions, and even your conclusion can all be found in one document. In order to use RMarkdown, you will have to install the package `rmarkdown`.
 
 Try to knit (= creating the document by executing the R code chunks and creating a R markdown (.md) document) the following two files:
 
-- [file1](/downloadable_files/faux-stub.Rmd) 
+-   [file1](/downloadable_files/faux-stub.Rmd)
 
-- [file2](/downloadable_files/mixed-stub.Rmd)
-
+-   [file2](/downloadable_files/mixed-stub.Rmd)
